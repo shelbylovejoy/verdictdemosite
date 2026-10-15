@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let the group vote on the trip · Shelby Lovejoy</title>
+<meta name="description" content="An unofficial concept for Wanderlog by Shelby Lovejoy: the planner asks the group, tripmates swipe through saved places from a link, and the list sorts by what people want.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Let the group vote on the trip: a concept for Wanderlog">
+<meta property="og:description" content="An unofficial concept for Wanderlog by Shelby Lovejoy: the planner asks the group, tripmates swipe through saved places from a link, and the list sorts by what people want.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shelbylovejoy.com/wanderlog/">
+<link rel="canonical" href="https://shelbylovejoy.com/wanderlog/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23F5F0E7'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23EBA41E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%231B1814'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F0E7;--bg2:#EDE6D9;--card:#FBF8F2;--ink:#1B1814;--muted:#5A5248;--line:#DCD2C2;--line2:#C9C0B2;--amber:#EBA41E;--amber-ink:#8A5300}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.6 "Instrument Sans",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--amber-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;gap:16px}
+.brand{font-family:"Instrument Serif",serif;font-size:24px;color:var(--ink);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.top nav{display:flex;gap:22px}
+.top nav a{font-size:15px;font-weight:500}
+.eyebrow{font:500 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,6.2vw,84px);line-height:1;letter-spacing:-.02em;margin:18px 0 24px;text-wrap:balance}
+.lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:31em}
+.byline{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:26px;padding-top:18px;border-top:1px solid var(--line2);font-size:15px}
+.byline .sep{color:var(--line2)}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{background:var(--amber);color:var(--ink);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;line-height:1.3}
+.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:56px;align-items:center;padding:48px 0 96px}
+.hero-visual{display:flex;justify-content:center;align-items:center;min-height:420px}
+.howto{border-top:1px solid var(--line);padding:88px 0 96px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(40px,4.8vw,64px);line-height:1.02;letter-spacing:-.015em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.mocknote{font:400 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.06em;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.step .shot{height:460px;display:flex;align-items:center;justify-content:center}
+.step .cap{display:flex;gap:12px;margin-top:24px;font-size:16px;line-height:1.55}
+.step .cap .n{font-family:"Instrument Serif",serif;font-size:40px;line-height:.85;flex:none}
+.step .cap b{font-weight:600}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:72px}
+.scope>div{padding:22px 24px 0 0}
+.scope>div+div{padding-left:24px;border-left:1px solid var(--line2)}
+.scope h4{font-size:16px;font-weight:600;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:14px;line-height:1.35}
+.chip.dash{border-style:dashed}
+.chip.no{border-color:transparent;background:var(--line);text-decoration:line-through;color:var(--muted)}
+.band{background:var(--bg2);border-top:1px solid var(--line);padding:96px 0 104px}
+.band .sec-head{margin-bottom:36px}
+.sub{color:var(--muted);font-size:17px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:44px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:52px;align-items:center;margin-bottom:16px}
+.card.single{grid-template-columns:minmax(0,1fr)}
+.num{font:400 13px "JetBrains Mono",monospace;color:var(--muted);margin-bottom:10px}
+h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.06;letter-spacing:-.01em;margin-bottom:16px;text-wrap:balance}
+.card p{font-size:17px;line-height:1.65}
+.card p+p{margin-top:12px}
+.tag{display:inline-block;margin-top:22px;background:var(--amber);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.stat{border-top:1.5px solid var(--ink);padding-top:14px}
+.stat .big{font-family:"Instrument Serif",serif;font-size:clamp(84px,10vw,128px);line-height:.92;letter-spacing:-.03em;white-space:nowrap}
+.stat .cap{font-size:15px;line-height:1.55;color:var(--muted);margin-top:16px;max-width:24em}
+.ev{list-style:none;margin-top:6px}
+.ev li{padding:18px 0;border-top:1px solid var(--line)}
+.ev li:first-child{border-top:0;padding-top:4px}
+.ev p{font-size:17px}
+.ev .src{display:block;margin-top:6px;font:400 12px/1.5 "JetBrains Mono",monospace;color:var(--muted)}
+.ev .src a{color:var(--muted)}
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.tests .box{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg)}
+.tests h4{font:500 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:10px}
+.tests ul{list-style:none}
+.tests li{padding:9px 0;border-top:1px dashed var(--line2);font-size:15.5px;line-height:1.5}
+.tests li:first-child{border-top:0;padding-top:2px}
+.quote{font-family:"Instrument Serif",serif;font-size:clamp(30px,3.2vw,40px);line-height:1.12;letter-spacing:-.01em;border-left:2px solid var(--amber);padding-left:22px}
+.more{display:inline-block;margin-top:18px;font-weight:500}
+.cta{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;border-top:1.5px solid var(--ink);padding-top:40px;margin-top:72px}
+.cta h2{max-width:10.5em}
+.cta .links{display:flex;flex-direction:column;gap:10px;text-align:right;font-size:16px}
+footer{padding:64px 0 72px;color:var(--muted);font-size:13px;line-height:1.65}
+footer h5{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;margin:22px 0 8px}
+footer ol{padding-left:18px}
+footer li{margin:3px 0}
+footer a{color:var(--muted)}
+
+/* device frames */
+.phone{container-type:inline-size;width:212px;aspect-ratio:9/19;background:#0e0d0c;border-radius:36px;padding:8px;box-shadow:0 34px 54px -30px rgba(27,24,20,.6),0 0 0 1px rgba(0,0,0,.35);flex:none;position:relative}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:29px;overflow:hidden;font-family:"Instrument Sans",system-ui,sans-serif;font-size:5.6cqw;line-height:1.35}
+.phone .scr::before{content:"";position:absolute;top:3.4cqw;left:50%;transform:translateX(-50%);width:31cqw;height:8.6cqw;border-radius:6cqw;background:#0e0d0c;z-index:5}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 8cqw 0;height:14cqw;font-size:4.8cqw;font-weight:600}
+.sbar i{display:inline-block;width:9cqw;height:4cqw;border-radius:1.2cqw;border:.6cqw solid currentColor;opacity:.8}
+.tv{width:100%;max-width:540px;flex:none}
+.tv .bezel{container-type:inline-size;background:#232220;border-radius:12px;padding:9px;box-shadow:0 34px 60px -34px rgba(27,24,20,.7)}
+.tv .scr{aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;font-family:"Instrument Sans",system-ui,sans-serif;font-size:2.6cqw;line-height:1.3}
+.tv .stand{width:24%;height:9px;background:#3a3835;margin:0 auto;border-radius:0 0 6px 6px}
+.combo{position:relative;width:100%;max-width:560px;padding-bottom:112px}
+.combo .tv{width:80%}
+.combo .phone{position:absolute;right:0;bottom:0;width:140px}
+.pair{display:flex;gap:22px;align-items:flex-end;justify-content:center}
+.pair>div:nth-child(2){transform:translateY(-34px)}
+.lbl{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:12px}
+
+@media (max-width:900px){
+ body{font-size:17px}
+ .wrap{padding:0 20px}
+ .top nav{gap:14px}
+ .hero{grid-template-columns:minmax(0,1fr);gap:40px;padding:24px 0 72px}
+ .hero-visual{min-height:0}
+ .howto{padding:64px 0 72px}
+ .steps{grid-template-columns:minmax(0,1fr);gap:56px}
+ .step .shot{height:auto}
+ .scope{grid-template-columns:minmax(0,1fr)}
+ .scope>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line2);margin-top:22px}
+ .band{padding:64px 0 72px}
+ .card{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:30px}
+ .tests{grid-template-columns:minmax(0,1fr)}
+ .cta{flex-direction:column;align-items:flex-start}
+ .cta .links{text-align:left}
+ .combo{padding-bottom:84px}
+ .combo .phone{width:100px;right:0}
+ .byline .sep{display:none}
+ .byline{gap:4px 16px}
+ .pair{gap:14px}
+ .pair .phone{width:156px}
+ .pair>div:nth-child(2){transform:translateY(-22px)}
+}
+@media (max-width:380px){
+ .top nav a:nth-child(2){display:none}
+ .pair .phone{width:140px}
+}
+
+
+.wl{background:#fbfaf8;color:#1B1814}
+.wl .map{height:62cqw;margin-top:-2cqw;position:relative;overflow:hidden;background:#e9e4d8}
+.wl .map::before{content:"";position:absolute;inset:0;background:
+ linear-gradient(28deg,transparent 46%,#fff 46.5%,#fff 49%,transparent 49.5%),
+ linear-gradient(-62deg,transparent 58%,#fff 58.5%,#fff 60.5%,transparent 61%),
+ linear-gradient(90deg,transparent 30%,#f7f3ea 30.3%,#f7f3ea 32%,transparent 32.3%),
+ radial-gradient(40% 32% at 78% 72%,#cfe3c6 0%,#cfe3c6 99%,transparent 100%),
+ radial-gradient(26% 20% at 18% 30%,#cfe3c6 0%,#cfe3c6 99%,transparent 100%)}
+.wl .pin{position:absolute;width:7cqw;height:7cqw;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#1f6f63;display:flex;align-items:center;justify-content:center;box-shadow:0 1cqw 2cqw rgba(0,0,0,.18)}
+.wl .pin b{transform:rotate(45deg);color:#fff;font-size:3.6cqw;font-weight:700}
+.wl .sheet{position:absolute;left:0;right:0;bottom:0;top:52cqw;background:#fff;border-radius:7cqw 7cqw 0 0;box-shadow:0 -2cqw 8cqw rgba(27,24,20,.1);padding:4cqw 6cqw 0}
+.wl .grab{width:12cqw;height:1.4cqw;border-radius:2cqw;background:#ddd6ca;margin:0 auto 3cqw}
+.wl .h{font:400 8.4cqw/1.05 "Instrument Serif",serif}
+.wl .h em{display:block;font:400 4.2cqw "Instrument Sans";color:#5A5248;margin-top:1cqw}
+.wl .sub{margin:4cqw 0 1cqw;font:500 3.6cqw "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#8b8478}
+.wl .it{display:flex;align-items:center;gap:3cqw;padding:2.6cqw 0;border-top:1px solid #efe9df;font-size:5cqw}
+.wl .it:first-of-type{border-top:0}
+.wl .it i{width:6cqw;height:6cqw;border-radius:50%;background:#1f6f63;color:#fff;font-style:normal;font-size:3.4cqw;font-weight:700;display:flex;align-items:center;justify-content:center;flex:none}
+.wl .ask{position:absolute;left:6cqw;right:6cqw;bottom:7cqw;background:#EBA41E;color:#1B1814;text-align:center;border-radius:20cqw;padding:3.8cqw 0;font-weight:700;font-size:5.2cqw;box-shadow:0 2cqw 5cqw rgba(235,164,30,.35)}
+.wl .ask.dark{background:#1B1814;color:#fff;box-shadow:none}
+.wl .tp{display:flex;justify-content:space-between;margin:1cqw 7cqw 0;font-size:4.4cqw;color:#5A5248}
+.wl .wcard{margin:4cqw 6cqw 0;background:#fff;border:1px solid #ece6db;border-radius:6cqw;overflow:hidden;box-shadow:0 3cqw 8cqw -4cqw rgba(27,24,20,.25)}
+.wl .photo{height:60cqw;background:linear-gradient(180deg,#f6c98b 0%,#e98a5b 45%,#7b4f86 100%);position:relative;overflow:hidden}
+.wl .photo::before{content:"";position:absolute;left:24%;right:24%;bottom:14%;height:30%;background:#3a2a33;clip-path:polygon(0 100%,0 30%,14% 30%,14% 0,86% 0,86% 30%,100% 30%,100% 100%,62% 100%,62% 55%,38% 55%,38% 100%)}
+.wl .photo::after{content:"";position:absolute;left:0;right:0;bottom:0;height:14%;background:linear-gradient(180deg,#5b6f86,#38485c)}
+.wl .wt{padding:4cqw 5cqw 0;font-weight:700;font-size:6.2cqw;line-height:1.1}
+.wl .wm{padding:1.4cqw 5cqw 0;font-size:4.4cqw;color:#5A5248;line-height:1.35}
+.wl .why{margin:3cqw 5cqw 5cqw;background:#f5f0e7;border-radius:3cqw;padding:2.6cqw 3.4cqw;font-size:4.2cqw;color:#5A5248;line-height:1.35}
+.wl .btns{display:grid;grid-template-columns:1fr 1fr;gap:3cqw;margin:4cqw 6cqw 0}
+.wl .btns span{border-radius:20cqw;padding:3.4cqw 0;text-align:center;font-weight:700;font-size:5.2cqw}
+.wl .skip{border:1px solid #cfc7ba}
+.wl .in{background:#1B1814;color:#fff}
+.wl .noacct{text-align:center;font-size:3.8cqw;color:#8b8478;margin-top:3cqw}
+.wl .rh{margin:2cqw 6cqw 0}
+.wl .res{display:flex;align-items:center;gap:3cqw;margin:0 6cqw;padding:3cqw 0;border-top:1px solid #efe9df;font-size:5cqw}
+.wl .res .v{flex:none;width:11cqw;text-align:center;border-radius:10cqw;padding:1cqw 0;font-size:3.8cqw;font-weight:700;background:#efe9df;color:#5A5248}
+.wl .res .v.all{background:#1f6f63;color:#fff}
+.wl .res em{margin-left:auto;font-style:normal;font-size:3.6cqw;color:#8A5300;background:#fff4dc;border-radius:10cqw;padding:.8cqw 2.4cqw}
+.wl .res.dim{color:#a59d90}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">Shelby Lovejoy</a>
+    <nav><a href="/resume/">Resume</a><a href="https://www.linkedin.com/in/shelbylovejoy">LinkedIn</a><a href="mailto:shelbylovejoy99@gmail.com">Email</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">A concept for Wanderlog · Unofficial</div>
+      <h1>Let the group vote on the trip.</h1>
+      <p class="lede">Wanderlog lets everyone edit the same itinerary. In most groups, one person does. A quick way to say what you'd actually want would bring everyone else in.</p>
+      <div class="byline"><span>By Shelby Lovejoy</span><span class="sep">·</span><span>Georgia Tech CS</span><span class="sep">·</span><span>Built <a href="/">Verdict</a> at Paramount</span></div>
+      <div class="pills"><span class="pill">Swipe from a link</span><span class="pill">No account needed</span><span class="pill">The planner keeps the final say</span></div>
+    </div>
+    <div class="hero-visual"><div class="pair"><div><div class="lbl">Tripmate</div><div class="phone"><div class="scr wl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Maya's Madrid trip</span><span>5 of 12</span></div>
+<div class="wcard">
+  <div class="photo"></div>
+  <div class="wt">Templo de Debod</div>
+  <div class="wm">Ancient Egyptian temple in a park · 18 min walk from the hotel</div>
+  <div class="why">Maya: "Free, and the sunset is the whole point"</div>
+</div>
+<div class="btns"><span class="skip">Skip</span><span class="in">I'm in</span></div>
+<div class="noacct">No account needed</div>
+</div></div></div><div><div class="lbl">Planner</div><div class="phone"><div class="scr wl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="h rh">What the group wants<em>4 of 4 people voted</em></div>
+<div style="height:4cqw"></div>
+<div class="res"><span class="v all">4/4</span>Templo de Debod</div>
+<div class="res"><span class="v all">4/4</span>Mercado de San Miguel</div>
+<div class="res"><span class="v">3/4</span>Museo del Prado</div>
+<div class="res"><span class="v">2/4</span>Toledo day trip<em>Split up?</em></div>
+<div class="res"><span class="v">1/4</span>Bernabéu tour</div>
+<div class="res dim"><span class="v">0/4</span>Museo de Cera</div>
+<div class="ask dark">Add the top 3 to days</div>
+</div></div></div></div></div>
+  </section>
+</div>
+
+<section class="howto">
+  <div class="wrap">
+    <div class="sec-head"><h2>How it would work</h2><span class="mocknote">Concept mockups, not the real app</span></div>
+    <div class="steps"><div class="step"><div class="shot"><div class="phone"><div class="scr wl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="map">
+  <span class="pin" style="left:22%;top:34%"><b>1</b></span>
+  <span class="pin" style="left:48%;top:20%"><b>2</b></span>
+  <span class="pin" style="left:60%;top:46%"><b>3</b></span>
+  <span class="pin" style="left:80%;top:26%"><b>4</b></span>
+</div>
+<div class="sheet">
+  <div class="grab"></div>
+  <div class="h">Madrid<em>Mar 12–16 · 4 people</em></div>
+  <div class="sub">Places to visit · 12</div>
+  <div class="it"><i>1</i>Museo del Prado</div>
+  <div class="it"><i>2</i>Templo de Debod</div>
+  <div class="it"><i>3</i>Mercado de San Miguel</div>
+  <div class="it"><i>4</i>Toledo day trip</div>
+</div>
+<div class="ask">Ask the group</div>
+</div></div></div><div class="cap"><span class="n">1</span><span><b>The planner asks.</b> On any list of saved places, tap Ask the group. Wanderlog makes one link for the group chat.</span></div></div><div class="step"><div class="shot"><div class="phone"><div class="scr wl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Maya's Madrid trip</span><span>5 of 12</span></div>
+<div class="wcard">
+  <div class="photo"></div>
+  <div class="wt">Templo de Debod</div>
+  <div class="wm">Ancient Egyptian temple in a park · 18 min walk from the hotel</div>
+  <div class="why">Maya: "Free, and the sunset is the whole point"</div>
+</div>
+<div class="btns"><span class="skip">Skip</span><span class="in">I'm in</span></div>
+<div class="noacct">No account needed</div>
+</div></div></div><div class="cap"><span class="n">2</span><span><b>Everyone swipes.</b> Tripmates open the link and go through the places: a photo, a line on why it's there, and how far it is from where you're staying. I'm in, or skip.</span></div></div><div class="step"><div class="shot"><div class="phone"><div class="scr wl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="h rh">What the group wants<em>4 of 4 people voted</em></div>
+<div style="height:4cqw"></div>
+<div class="res"><span class="v all">4/4</span>Templo de Debod</div>
+<div class="res"><span class="v all">4/4</span>Mercado de San Miguel</div>
+<div class="res"><span class="v">3/4</span>Museo del Prado</div>
+<div class="res"><span class="v">2/4</span>Toledo day trip<em>Split up?</em></div>
+<div class="res"><span class="v">1/4</span>Bernabéu tour</div>
+<div class="res dim"><span class="v">0/4</span>Museo de Cera</div>
+<div class="ask dark">Add the top 3 to days</div>
+</div></div></div><div class="cap"><span class="n">3</span><span><b>The list sorts itself.</b> Places come back ranked by how many people want them. The planner drags the top ones into days and drops the rest.</span></div></div></div>
+    <div class="scope">
+      <div><h4>In version one</h4><div class="chips"><span class="chip ">Voting on any saved list</span><span class="chip ">A link that opens without an account</span><span class="chip ">Ranked results for the planner</span></div></div>
+      <div><h4>Later</h4><div class="chips"><span class="chip dash">“Dinner tonight?” votes during the trip</span><span class="chip dash">Suggesting a split when it's 2 to 2</span></div></div>
+      <div><h4>Not doing</h4><div class="chips"><span class="chip no">Chat inside the app</span><span class="chip no">Majority rule over the planner</span><span class="chip no">Voting on flights and hotels</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Why I'd build it</h2><p class="sub">The problem, what's already there, how I'd test it, and why me.</p></div></div>
+    <div class="card"><div><div class="num">01</div><h3>Shared editing isn't shared deciding</h3><p>Group trips run on one planner. In a 2026 Klook survey, 72% of trip planners in the Philippines said their group's trips only happen because of them, and most spend more than ten hours planning.</p><p>Edit access doesn't change that. Adding something to a trip someone else built feels like overstepping, so tripmates stay quiet and the planner guesses.</p><span class="tag">Problem framing</span></div><div><div class="stat"><div class="big">72%</div><div class="cap">of trip planners in a 2026 Klook survey (Philippines results) said their group's trips only happen because of them.</div></div></div></div><div class="card single"><div><div class="num">02</div><h3>Why I think it works</h3><ul class="ev"><li><p>Wanderlog already has the group. More than a million people have tried it, and collaborators can work on the same trip for free. What's missing is a way to weigh in that takes two minutes.</p><span class="src"><a href="https://wanderlog.com">wanderlog.com</a></span></li><li><p>Google added voting on shared lists of places to Maps in 2018, so the gesture is already familiar. It just doesn't live inside an itinerary.</p><span class="src"><a href="https://blog.google/products/maps/all-together-now-group-planning-google-maps/">Google, Sep 2018</a></span></li><li><p>Hearing about it after the trip is worse. In the same survey, 55.7% of planners said a common complaint is that another itinerary would have been better.</p><span class="src"><a href="https://plus.inquirer.net/news/why-3-in-4-travel-plans-go-pfft/">Inquirer on Klook's survey, Aug 2026</a></span></li></ul><span class="tag">Research</span></div></div><div class="card single"><div><div class="num">03</div><h3>Test it on trips with three or more people</h3><p>That's where one planner is doing the work for a group. I'd compare trips that use Ask the group against similar trips that don't.</p><div class="tests"><div class="box"><h4>Measure</h4><ul><li>Share of invited tripmates who vote</li><li>Itinerary stops that came from a vote</li></ul></div><div class="box"><h4>Watch</h4><ul><li>Tripmates who install the app after voting</li><li>Planners who upgrade to Pro</li></ul></div><div class="box"><h4>Guardrails</h4><ul><li>Time to a finished itinerary doesn't go up</li><li>Planners keep using it after the first try</li></ul></div></div><span class="tag">Experiment design</span></div></div><div class="card"><div><div class="num">04</div><h3>I've built a group vote before</h3><p>At Paramount I built Verdict, a game that helps a room pick a movie. Everyone votes from their own phone, with no app and no account, and the TV shows what the group wants. It's the same shape: a group that needs to decide, and one person who doesn't want to be the only one deciding.</p><p>I'm a CS student at Georgia Tech, and I'd like to spend next summer building at Wanderlog.</p><a class="more" href="/">See how Verdict works →</a></div><div><div class="quote">Asking the group should take less effort than guessing.</div></div></div>
+    <div class="cta">
+      <h2>Got 15 minutes to talk about it?</h2>
+      <div class="links"><a href="mailto:shelbylovejoy99@gmail.com">shelbylovejoy99@gmail.com</a><a href="https://www.linkedin.com/in/shelbylovejoy">linkedin.com/in/shelbylovejoy</a><a href="/resume/">Resume (PDF)</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>An unofficial concept by Shelby Lovejoy. Not affiliated with or endorsed by Wanderlog. Place names are just examples. Everything here comes from public information and my own guesses. I haven't seen any internal data.</p>
+    <h5>Sources</h5>
+    <ol><li><a href="https://wanderlog.com">Wanderlog home page</a></li><li><a href="https://plus.inquirer.net/news/why-3-in-4-travel-plans-go-pfft/">Why 3 in 4 travel plans go pfft, on Klook's 2026 survey (Inquirer Plus, August 5, 2026)</a></li><li><a href="https://blog.google/products/maps/all-together-now-group-planning-google-maps/">All together now: group planning on Google Maps (Google, September 2018)</a></li></ol>
+  </div>
+</footer>
+</body>
+</html>
