@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let your friends&#x27; lists pick dinner · Shelby Lovejoy</title>
+<meta name="description" content="An unofficial concept for Beli by Shelby Lovejoy: a group dinner plan built from friends&#x27; Want to Try lists and rankings, swiped on everyone&#x27;s phone, then booked.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Let your friends&#x27; lists pick dinner: a concept for Beli">
+<meta property="og:description" content="An unofficial concept for Beli by Shelby Lovejoy: a group dinner plan built from friends&#x27; Want to Try lists and rankings, swiped on everyone&#x27;s phone, then booked.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shelbylovejoy.com/beli/">
+<link rel="canonical" href="https://shelbylovejoy.com/beli/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23F5F0E7'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23EBA41E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%231B1814'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F0E7;--bg2:#EDE6D9;--card:#FBF8F2;--ink:#1B1814;--muted:#5A5248;--line:#DCD2C2;--line2:#C9C0B2;--amber:#EBA41E;--amber-ink:#8A5300}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.6 "Instrument Sans",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--amber-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;gap:16px}
+.brand{font-family:"Instrument Serif",serif;font-size:24px;color:var(--ink);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.top nav{display:flex;gap:22px}
+.top nav a{font-size:15px;font-weight:500}
+.eyebrow{font:500 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,6.2vw,84px);line-height:1;letter-spacing:-.02em;margin:18px 0 24px;text-wrap:balance}
+.lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:31em}
+.byline{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:26px;padding-top:18px;border-top:1px solid var(--line2);font-size:15px}
+.byline .sep{color:var(--line2)}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{background:var(--amber);color:var(--ink);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;line-height:1.3}
+.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:56px;align-items:center;padding:48px 0 96px}
+.hero-visual{display:flex;justify-content:center;align-items:center;min-height:420px}
+.howto{border-top:1px solid var(--line);padding:88px 0 96px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(40px,4.8vw,64px);line-height:1.02;letter-spacing:-.015em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.mocknote{font:400 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.06em;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.step .shot{height:460px;display:flex;align-items:center;justify-content:center}
+.step .cap{display:flex;gap:12px;margin-top:24px;font-size:16px;line-height:1.55}
+.step .cap .n{font-family:"Instrument Serif",serif;font-size:40px;line-height:.85;flex:none}
+.step .cap b{font-weight:600}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:72px}
+.scope>div{padding:22px 24px 0 0}
+.scope>div+div{padding-left:24px;border-left:1px solid var(--line2)}
+.scope h4{font-size:16px;font-weight:600;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:14px;line-height:1.35}
+.chip.dash{border-style:dashed}
+.chip.no{border-color:transparent;background:var(--line);text-decoration:line-through;color:var(--muted)}
+.band{background:var(--bg2);border-top:1px solid var(--line);padding:96px 0 104px}
+.band .sec-head{margin-bottom:36px}
+.sub{color:var(--muted);font-size:17px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:44px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:52px;align-items:center;margin-bottom:16px}
+.card.single{grid-template-columns:minmax(0,1fr)}
+.num{font:400 13px "JetBrains Mono",monospace;color:var(--muted);margin-bottom:10px}
+h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.06;letter-spacing:-.01em;margin-bottom:16px;text-wrap:balance}
+.card p{font-size:17px;line-height:1.65}
+.card p+p{margin-top:12px}
+.tag{display:inline-block;margin-top:22px;background:var(--amber);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.stat{border-top:1.5px solid var(--ink);padding-top:14px}
+.stat .big{font-family:"Instrument Serif",serif;font-size:clamp(84px,10vw,128px);line-height:.92;letter-spacing:-.03em;white-space:nowrap}
+.stat .cap{font-size:15px;line-height:1.55;color:var(--muted);margin-top:16px;max-width:24em}
+.ev{list-style:none;margin-top:6px}
+.ev li{padding:18px 0;border-top:1px solid var(--line)}
+.ev li:first-child{border-top:0;padding-top:4px}
+.ev p{font-size:17px}
+.ev .src{display:block;margin-top:6px;font:400 12px/1.5 "JetBrains Mono",monospace;color:var(--muted)}
+.ev .src a{color:var(--muted)}
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.tests .box{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg)}
+.tests h4{font:500 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:10px}
+.tests ul{list-style:none}
+.tests li{padding:9px 0;border-top:1px dashed var(--line2);font-size:15.5px;line-height:1.5}
+.tests li:first-child{border-top:0;padding-top:2px}
+.quote{font-family:"Instrument Serif",serif;font-size:clamp(30px,3.2vw,40px);line-height:1.12;letter-spacing:-.01em;border-left:2px solid var(--amber);padding-left:22px}
+.more{display:inline-block;margin-top:18px;font-weight:500}
+.cta{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;border-top:1.5px solid var(--ink);padding-top:40px;margin-top:72px}
+.cta h2{max-width:10.5em}
+.cta .links{display:flex;flex-direction:column;gap:10px;text-align:right;font-size:16px}
+footer{padding:64px 0 72px;color:var(--muted);font-size:13px;line-height:1.65}
+footer h5{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;margin:22px 0 8px}
+footer ol{padding-left:18px}
+footer li{margin:3px 0}
+footer a{color:var(--muted)}
+
+/* device frames */
+.phone{container-type:inline-size;width:212px;aspect-ratio:9/19;background:#0e0d0c;border-radius:36px;padding:8px;box-shadow:0 34px 54px -30px rgba(27,24,20,.6),0 0 0 1px rgba(0,0,0,.35);flex:none;position:relative}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:29px;overflow:hidden;font-family:"Instrument Sans",system-ui,sans-serif;font-size:5.6cqw;line-height:1.35}
+.phone .scr::before{content:"";position:absolute;top:3.4cqw;left:50%;transform:translateX(-50%);width:31cqw;height:8.6cqw;border-radius:6cqw;background:#0e0d0c;z-index:5}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 8cqw 0;height:14cqw;font-size:4.8cqw;font-weight:600}
+.sbar i{display:inline-block;width:9cqw;height:4cqw;border-radius:1.2cqw;border:.6cqw solid currentColor;opacity:.8}
+.tv{width:100%;max-width:540px;flex:none}
+.tv .bezel{container-type:inline-size;background:#232220;border-radius:12px;padding:9px;box-shadow:0 34px 60px -34px rgba(27,24,20,.7)}
+.tv .scr{aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;font-family:"Instrument Sans",system-ui,sans-serif;font-size:2.6cqw;line-height:1.3}
+.tv .stand{width:24%;height:9px;background:#3a3835;margin:0 auto;border-radius:0 0 6px 6px}
+.combo{position:relative;width:100%;max-width:560px;padding-bottom:112px}
+.combo .tv{width:80%}
+.combo .phone{position:absolute;right:0;bottom:0;width:140px}
+.pair{display:flex;gap:22px;align-items:flex-end;justify-content:center}
+.pair>div:nth-child(2){transform:translateY(-34px)}
+.lbl{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:12px}
+
+@media (max-width:900px){
+ body{font-size:17px}
+ .wrap{padding:0 20px}
+ .top nav{gap:14px}
+ .hero{grid-template-columns:minmax(0,1fr);gap:40px;padding:24px 0 72px}
+ .hero-visual{min-height:0}
+ .howto{padding:64px 0 72px}
+ .steps{grid-template-columns:minmax(0,1fr);gap:56px}
+ .step .shot{height:auto}
+ .scope{grid-template-columns:minmax(0,1fr)}
+ .scope>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line2);margin-top:22px}
+ .band{padding:64px 0 72px}
+ .card{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:30px}
+ .tests{grid-template-columns:minmax(0,1fr)}
+ .cta{flex-direction:column;align-items:flex-start}
+ .cta .links{text-align:left}
+ .combo{padding-bottom:84px}
+ .combo .phone{width:100px;right:0}
+ .byline .sep{display:none}
+ .byline{gap:4px 16px}
+ .pair{gap:14px}
+ .pair .phone{width:156px}
+ .pair>div:nth-child(2){transform:translateY(-22px)}
+}
+@media (max-width:380px){
+ .top nav a:nth-child(2){display:none}
+ .pair .phone{width:140px}
+}
+
+
+.bl{background:#fbfaf8;color:#1B1814}
+.bl .h{margin:2cqw 7cqw 0;font:400 9.6cqw/1.02 "Instrument Serif",serif}
+.bl .sub{margin:1.4cqw 7cqw 0;font-size:4.4cqw;color:#5A5248}
+.bl .ppl{display:flex;align-items:center;margin:4cqw 7cqw 5cqw}
+.bl .ppl i{width:9cqw;height:9cqw;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:3.8cqw;color:#1B1814;box-shadow:0 0 0 .9cqw #fbfaf8;margin-right:-2cqw}
+.bl .ppl span{margin-left:4.6cqw;font-size:4.4cqw;color:#5A5248}
+.bl .lab{margin:0 7cqw 2cqw;font:500 3.6cqw "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:#8b8478}
+.bl .chs{display:flex;flex-wrap:wrap;gap:2cqw;margin:0 7cqw 4.6cqw}
+.bl .chs span{border:1px solid #cfc7ba;border-radius:10cqw;padding:1.6cqw 3.2cqw;font-size:4.4cqw}
+.bl .chs span.on{background:#1B1814;color:#fff;border-color:#1B1814;font-weight:600}
+.bl .go{position:absolute;left:6cqw;right:6cqw;bottom:7cqw;background:#2f7d5b;color:#fff;border-radius:6cqw;padding:3.6cqw 5cqw;font-weight:700;font-size:5.2cqw}
+.bl .go em{display:block;font-style:normal;font-weight:500;font-size:4.2cqw;opacity:.8;margin-top:.4cqw}
+.bl .tp{display:flex;justify-content:space-between;margin:1cqw 7cqw 0;font-size:4.4cqw;color:#5A5248}
+.bl .bc{margin:4cqw 6cqw 0;background:#fff;border:1px solid #ece6db;border-radius:6cqw;overflow:hidden;box-shadow:0 3cqw 8cqw -4cqw rgba(27,24,20,.25)}
+.bl .photo{height:62cqw;position:relative;overflow:hidden;background:radial-gradient(60% 55% at 50% 58%,#f4e3c4 0 48%,#e6c79a 49% 52%,transparent 53%),linear-gradient(160deg,#d86f4b,#7a3b2e)}
+.bl .photo::before{content:"";position:absolute;width:30cqw;height:30cqw;border-radius:50%;left:33cqw;top:16cqw;background:radial-gradient(circle at 40% 40%,#f2b84b 0 22%,#e0573b 23% 40%,#8fbf6a 41% 52%,#f4e3c4 53%)}
+.bl .photo::after{content:"";position:absolute;width:9cqw;height:34cqw;border-radius:3cqw;background:#c9c0b2;right:12cqw;top:14cqw;transform:rotate(18deg);opacity:.85}
+.bl .nm{padding:4cqw 5cqw 0;font-weight:700;font-size:6.2cqw}
+.bl .mt{padding:1cqw 5cqw 0;font-size:4.4cqw;color:#5A5248}
+.bl .why{display:flex;flex-direction:column;gap:1.6cqw;padding:3.4cqw 5cqw 5cqw}
+.bl .why span{font-size:4cqw;display:flex;gap:2cqw;align-items:center}
+.bl .why b{width:2.6cqw;height:2.6cqw;border-radius:50%;background:#2f7d5b;flex:none}
+.bl .why b.am{background:#EBA41E}
+.bl .yn{display:flex;justify-content:center;gap:10cqw;margin-top:4.6cqw}
+.bl .yn span{width:17cqw;height:17cqw;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7.4cqw;font-weight:700}
+.bl .no{border:1px solid #cfc7ba}
+.bl .yes{background:#2f7d5b;color:#fff}
+.bl.match{background:linear-gradient(180deg,#eef5ef 0%,#fbfaf8 55%)}
+.bl .kick{text-align:center;margin-top:3cqw;font:600 4cqw "JetBrains Mono",monospace;letter-spacing:.22em;text-transform:uppercase;color:#2f7d5b}
+.bl .big{text-align:center;margin:3cqw 6cqw 0;font:400 13cqw/1 "Instrument Serif",serif}
+.bl .c{text-align:center}
+.bl .faces{display:flex;justify-content:center;margin:5cqw 0}
+.bl .faces i{width:11cqw;height:11cqw;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:4.4cqw;color:#1B1814;box-shadow:0 0 0 1cqw #f3f7f2;margin:0 -1.4cqw}
+.bl .slot{margin:0 6cqw;background:#fff;border:1px solid #e3ddd2;border-radius:5cqw;padding:4cqw 5cqw;display:flex;justify-content:space-between;align-items:center;font-size:4.6cqw}
+.bl .slot b{font-size:5.4cqw}
+.bl .res{margin:4cqw 6cqw 0;background:#2f7d5b;color:#fff;text-align:center;border-radius:20cqw;padding:3.8cqw 0;font-weight:700;font-size:5.4cqw}
+.bl .note{text-align:center;margin:3.4cqw 8cqw 0;font-size:4cqw;color:#5A5248}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">Shelby Lovejoy</a>
+    <nav><a href="/resume/">Resume</a><a href="https://www.linkedin.com/in/shelbylovejoy">LinkedIn</a><a href="mailto:shelbylovejoy99@gmail.com">Email</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">A concept for Beli · Unofficial</div>
+      <h1>Let your friends' lists pick dinner.</h1>
+      <p class="lede">Beli already knows where each of your friends wants to go and how they rank the places they've been. The group chat doesn't. Put the two together and dinner picks itself.</p>
+      <div class="byline"><span>By Shelby Lovejoy</span><span class="sep">·</span><span>Georgia Tech CS</span><span class="sep">·</span><span>Built <a href="/">Verdict</a> at Paramount</span></div>
+      <div class="pills"><span class="pill">Built from friends' lists</span><span class="pill">Open and bookable that night</span><span class="pill">Book the match</span></div>
+    </div>
+    <div class="hero-visual"><div class="pair"><div><div class="lbl">Everyone</div><div class="phone"><div class="scr bl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Dinner Friday</span><span>5 of 18</span></div>
+<div class="bc">
+  <div class="photo"></div>
+  <div class="nm">Thai Diner</div>
+  <div class="mt">Thai · Nolita · $$</div>
+  <div class="why"><span><b></b>On 3 of your Want to Try lists</span><span><b class="am"></b>Leo ranked it in his top 10</span><span><b></b>Tables for 4 at 8:15</span></div>
+</div>
+<div class="yn"><span class="no">✕</span><span class="yes">✓</span></div>
+</div></div></div><div><div class="lbl">The match</div><div class="phone"><div class="scr bl match">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="kick">Everyone's in</div>
+<div class="big">Thai Diner</div>
+<div class="mt c">Thai · Nolita · $$</div>
+<div class="faces"><i style="background:#EBA41E">M</i><i style="background:#9fd3c7">L</i><i style="background:#f2a3b3">P</i><i style="background:#c9b6f2">Y</i></div>
+<div class="slot"><span>Fri, 8:15 PM</span><b>4 people</b></div>
+<div class="res">Reserve</div>
+<div class="note">We'll ask all four of you to rank it on Saturday.</div>
+</div></div></div></div></div>
+  </section>
+</div>
+
+<section class="howto">
+  <div class="wrap">
+    <div class="sec-head"><h2>How it would work</h2><span class="mocknote">Concept mockups, not the real app</span></div>
+    <div class="steps"><div class="step"><div class="shot"><div class="phone"><div class="scr bl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="h">Dinner Friday</div>
+<div class="ppl"><i style="background:#EBA41E">M</i><i style="background:#9fd3c7">L</i><i style="background:#f2a3b3">P</i><i style="background:#c9b6f2">Y</i><span>You, Maya, Leo, Priya</span></div>
+<div class="lab">When</div>
+<div class="chs"><span class="on">Fri · 8 PM</span><span>Sat</span></div>
+<div class="lab">Where</div>
+<div class="chs"><span class="on">Nolita</span><span class="on">West Village</span><span>LES</span></div>
+<div class="lab">Price</div>
+<div class="chs"><span>$</span><span class="on">$$</span><span>$$$</span></div>
+<div class="go">Deal the spots<em>18 places on your lists are open Friday</em></div>
+</div></div></div><div class="cap"><span class="n">1</span><span><b>Start a plan.</b> Pick the friends, the night, the neighborhood and a price range.</span></div></div><div class="step"><div class="shot"><div class="phone"><div class="scr bl">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Dinner Friday</span><span>5 of 18</span></div>
+<div class="bc">
+  <div class="photo"></div>
+  <div class="nm">Thai Diner</div>
+  <div class="mt">Thai · Nolita · $$</div>
+  <div class="why"><span><b></b>On 3 of your Want to Try lists</span><span><b class="am"></b>Leo ranked it in his top 10</span><span><b></b>Tables for 4 at 8:15</span></div>
+</div>
+<div class="yn"><span class="no">✕</span><span class="yes">✓</span></div>
+</div></div></div><div class="cap"><span class="n">2</span><span><b>Everyone swipes.</b> Beli deals places from everyone's Want to Try lists and the spots your friends ranked highest, filtered to what's open and bookable that night. Each person swipes on their own phone.</span></div></div><div class="step"><div class="shot"><div class="phone"><div class="scr bl match">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="kick">Everyone's in</div>
+<div class="big">Thai Diner</div>
+<div class="mt c">Thai · Nolita · $$</div>
+<div class="faces"><i style="background:#EBA41E">M</i><i style="background:#9fd3c7">L</i><i style="background:#f2a3b3">P</i><i style="background:#c9b6f2">Y</i></div>
+<div class="slot"><span>Fri, 8:15 PM</span><b>4 people</b></div>
+<div class="res">Reserve</div>
+<div class="note">We'll ask all four of you to rank it on Saturday.</div>
+</div></div></div><div class="cap"><span class="n">3</span><span><b>Book the match.</b> The first place everyone's in on comes back with a Reserve button. The next day, everyone gets a nudge to rank it.</span></div></div></div>
+    <div class="scope">
+      <div><h4>In version one</h4><div class="chips"><span class="chip ">Want to Try overlap</span><span class="chip ">Open and bookable that night</span><span class="chip ">Reserve from the match</span></div></div>
+      <div><h4>Later</h4><div class="chips"><span class="chip dash">Friends not on Beli join from a link</span><span class="chip dash">Standing plans, like a monthly dinner</span></div></div>
+      <div><h4>Not doing</h4><div class="chips"><span class="chip no">Group chat in Beli</span><span class="chip no">Paid placement in the deck</span><span class="chip no">Public reviews</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Why I'd build it</h2><p class="sub">The problem, what's already there, how I'd test it, and why me.</p></div></div>
+    <div class="card"><div><div class="num">01</div><h3>Dinner plans die in the group chat</h3><p>Every group chat has the same thread. Someone asks where we should eat, four people say they don't care, and the one person who does ends up deciding. Meanwhile the answer is sitting in their Beli lists.</p><p>Beli doesn't have messaging, so that thread happens somewhere else. The decision should happen where the lists are.</p><span class="tag">Problem framing</span></div><div><div class="stat"><div class="big">87%</div><div class="cap">of diners take a friend's recommendation more seriously than an online rating (TouchBistro survey of 521 U.S. diners, 2017). Beli is built on that.</div></div></div></div><div class="card single"><div><div class="num">02</div><h3>Beli already has the hard parts</h3><ul class="ev"><li><p>The founders have said they want to make it easier to plan dining experiences. This is one way to do that.</p><span class="src"><a href="https://www.bostonglobe.com/2026/08/04/lifestyle/beli-restaurant-rating-app/">Boston Globe, Aug 2026</a></span></li><li><p>Want to Try lists are already where plans start. You can save places straight from Instagram and TikTok posts.</p><span class="src"><a href="https://www.foodnetwork.com/fn-dish/news/beli-app-trend">Food Network, Aug 2025</a></span></li><li><p>Booking is already built in through OpenTable and SevenRooms, so a match can turn into a reservation without leaving the app.</p><span class="src"><a href="https://www.tovima.com/wsj/the-app-that-makes-rating-restaurants-fun-again-and-gets-better-the-more-you-use-it">The Wall Street Journal, May 2025</a></span></li><li><p>It's a young, social crowd. About 80% of users are under 35, and most join because a friend brought them in.</p><span class="src"><a href="https://www.foodnetwork.com/fn-dish/news/beli-app-trend">Food Network, Aug 2025</a></span></li></ul><span class="tag">Research</span></div></div><div class="card single"><div><div class="num">03</div><h3>Start with dinners for four in New York</h3><p>New York is where Beli is busiest, and four is about where a group chat stops agreeing on anything. I'd test it there first, then open it up.</p><div class="tests"><div class="box"><h4>Measure</h4><ul><li>Plans that end in a reservation</li><li>Minutes from starting a plan to a match</li></ul></div><div class="box"><h4>Watch</h4><ul><li>Rankings logged the day after</li><li>Friends who join Beli from a plan</li></ul></div><div class="box"><h4>Guardrails</h4><ul><li>Want to Try adds don't drop</li><li>Nobody's private lists get exposed</li></ul></div></div><span class="tag">Experiment design</span></div></div><div class="card"><div><div class="num">04</div><h3>I've built group decisions before</h3><p>At Paramount I built Verdict, a game that helps a room pick a movie. Everyone votes on their own phone, with no app and no account, and the TV shows what the group wants. It's the same problem: nobody wants to be the one who picks.</p><p>I'm a CS student at Georgia Tech, and I'd like to spend next summer building at Beli.</p><a class="more" href="/">See how Verdict works →</a></div><div><div class="quote">Four people saying "I don't care" is not a decision.</div></div></div>
+    <div class="cta">
+      <h2>Got 15 minutes to talk about it?</h2>
+      <div class="links"><a href="mailto:shelbylovejoy99@gmail.com">shelbylovejoy99@gmail.com</a><a href="https://www.linkedin.com/in/shelbylovejoy">linkedin.com/in/shelbylovejoy</a><a href="/resume/">Resume (PDF)</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>An unofficial concept by Shelby Lovejoy. Not affiliated with or endorsed by Beli. Restaurant names are just examples, and the rankings shown are made up. Everything here comes from public information and my own guesses. I haven't seen any internal data.</p>
+    <h5>Sources</h5>
+    <ol><li><a href="https://www.bostonglobe.com/2026/08/04/lifestyle/beli-restaurant-rating-app/">Beli restaurant rating app (Boston Globe, August 4, 2026)</a></li><li><a href="https://www.foodnetwork.com/fn-dish/news/beli-app-trend">A once niche food app is now a social place for Gen Z (Food Network, August 4, 2025)</a></li><li><a href="https://www.tovima.com/wsj/the-app-that-makes-rating-restaurants-fun-again-and-gets-better-the-more-you-use-it">The app that makes rating restaurants fun again (The Wall Street Journal, May 10, 2025, via To Vima)</a></li><li><a href="https://www.touchbistro.com/wp-content/uploads/2021/01/How_Diners_Choose_Restaurants_Singles.pdf">How diners choose restaurants (TouchBistro and Maru Matchbox, 2017)</a></li></ol>
+  </div>
+</footer>
+</body>
+</html>

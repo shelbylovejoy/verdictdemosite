@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Let the whole couch pick · Shelby Lovejoy</title>
+<meta name="description" content="An unofficial concept for JustWatch by Shelby Lovejoy: a group pick on the TV, where everyone swipes from their phone across every service the household has.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Let the whole couch pick: a concept for JustWatch">
+<meta property="og:description" content="An unofficial concept for JustWatch by Shelby Lovejoy: a group pick on the TV, where everyone swipes from their phone across every service the household has.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://shelbylovejoy.com/justwatch/">
+<link rel="canonical" href="https://shelbylovejoy.com/justwatch/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23F5F0E7'/%3E%3Ccircle cx='50' cy='50' r='30' fill='%23EBA41E'/%3E%3Ctext x='50' y='60' text-anchor='middle' font-family='Georgia,serif' font-size='28' fill='%231B1814'%3ESL%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#F5F0E7;--bg2:#EDE6D9;--card:#FBF8F2;--ink:#1B1814;--muted:#5A5248;--line:#DCD2C2;--line2:#C9C0B2;--amber:#EBA41E;--amber-ink:#8A5300}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{background:var(--bg);color:var(--ink);font:400 18px/1.6 "Instrument Sans",system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:var(--amber-ink);text-underline-offset:3px;text-decoration-thickness:1px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 40px}
+.top{display:flex;justify-content:space-between;align-items:center;padding:28px 0;gap:16px}
+.brand{font-family:"Instrument Serif",serif;font-size:24px;color:var(--ink);text-decoration:none;letter-spacing:-.01em;white-space:nowrap}
+.top nav{display:flex;gap:22px}
+.top nav a{font-size:15px;font-weight:500}
+.eyebrow{font:500 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-ink)}
+h1{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(46px,6.2vw,84px);line-height:1;letter-spacing:-.02em;margin:18px 0 24px;text-wrap:balance}
+.lede{font-size:19px;line-height:1.6;color:var(--muted);max-width:31em}
+.byline{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;margin-top:26px;padding-top:18px;border-top:1px solid var(--line2);font-size:15px}
+.byline .sep{color:var(--line2)}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.pill{background:var(--amber);color:var(--ink);border-radius:999px;padding:7px 15px;font-size:14px;font-weight:600;line-height:1.3}
+.hero{display:grid;grid-template-columns:minmax(0,1.02fr) minmax(0,.98fr);gap:56px;align-items:center;padding:48px 0 96px}
+.hero-visual{display:flex;justify-content:center;align-items:center;min-height:420px}
+.howto{border-top:1px solid var(--line);padding:88px 0 96px}
+h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(40px,4.8vw,64px);line-height:1.02;letter-spacing:-.015em}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:44px;flex-wrap:wrap}
+.mocknote{font:400 12px/1.5 "JetBrains Mono",monospace;letter-spacing:.06em;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.step .shot{height:460px;display:flex;align-items:center;justify-content:center}
+.step .cap{display:flex;gap:12px;margin-top:24px;font-size:16px;line-height:1.55}
+.step .cap .n{font-family:"Instrument Serif",serif;font-size:40px;line-height:.85;flex:none}
+.step .cap b{font-weight:600}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1.5px solid var(--ink);margin-top:72px}
+.scope>div{padding:22px 24px 0 0}
+.scope>div+div{padding-left:24px;border-left:1px solid var(--line2)}
+.scope h4{font-size:16px;font-weight:600;margin-bottom:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:14px;line-height:1.35}
+.chip.dash{border-style:dashed}
+.chip.no{border-color:transparent;background:var(--line);text-decoration:line-through;color:var(--muted)}
+.band{background:var(--bg2);border-top:1px solid var(--line);padding:96px 0 104px}
+.band .sec-head{margin-bottom:36px}
+.sub{color:var(--muted);font-size:17px;margin-top:8px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:44px;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:52px;align-items:center;margin-bottom:16px}
+.card.single{grid-template-columns:minmax(0,1fr)}
+.num{font:400 13px "JetBrains Mono",monospace;color:var(--muted);margin-bottom:10px}
+h3{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(32px,3.6vw,46px);line-height:1.06;letter-spacing:-.01em;margin-bottom:16px;text-wrap:balance}
+.card p{font-size:17px;line-height:1.65}
+.card p+p{margin-top:12px}
+.tag{display:inline-block;margin-top:22px;background:var(--amber);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:600}
+.stat{border-top:1.5px solid var(--ink);padding-top:14px}
+.stat .big{font-family:"Instrument Serif",serif;font-size:clamp(84px,10vw,128px);line-height:.92;letter-spacing:-.03em;white-space:nowrap}
+.stat .cap{font-size:15px;line-height:1.55;color:var(--muted);margin-top:16px;max-width:24em}
+.ev{list-style:none;margin-top:6px}
+.ev li{padding:18px 0;border-top:1px solid var(--line)}
+.ev li:first-child{border-top:0;padding-top:4px}
+.ev p{font-size:17px}
+.ev .src{display:block;margin-top:6px;font:400 12px/1.5 "JetBrains Mono",monospace;color:var(--muted)}
+.ev .src a{color:var(--muted)}
+.tests{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:26px}
+.tests .box{border:1px solid var(--line);border-radius:14px;padding:22px;background:var(--bg)}
+.tests h4{font:500 12px/1.4 "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--amber-ink);margin-bottom:10px}
+.tests ul{list-style:none}
+.tests li{padding:9px 0;border-top:1px dashed var(--line2);font-size:15.5px;line-height:1.5}
+.tests li:first-child{border-top:0;padding-top:2px}
+.quote{font-family:"Instrument Serif",serif;font-size:clamp(30px,3.2vw,40px);line-height:1.12;letter-spacing:-.01em;border-left:2px solid var(--amber);padding-left:22px}
+.more{display:inline-block;margin-top:18px;font-weight:500}
+.cta{display:flex;justify-content:space-between;align-items:flex-end;gap:32px;border-top:1.5px solid var(--ink);padding-top:40px;margin-top:72px}
+.cta h2{max-width:10.5em}
+.cta .links{display:flex;flex-direction:column;gap:10px;text-align:right;font-size:16px}
+footer{padding:64px 0 72px;color:var(--muted);font-size:13px;line-height:1.65}
+footer h5{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;margin:22px 0 8px}
+footer ol{padding-left:18px}
+footer li{margin:3px 0}
+footer a{color:var(--muted)}
+
+/* device frames */
+.phone{container-type:inline-size;width:212px;aspect-ratio:9/19;background:#0e0d0c;border-radius:36px;padding:8px;box-shadow:0 34px 54px -30px rgba(27,24,20,.6),0 0 0 1px rgba(0,0,0,.35);flex:none;position:relative}
+.phone .scr{position:relative;width:100%;height:100%;border-radius:29px;overflow:hidden;font-family:"Instrument Sans",system-ui,sans-serif;font-size:5.6cqw;line-height:1.35}
+.phone .scr::before{content:"";position:absolute;top:3.4cqw;left:50%;transform:translateX(-50%);width:31cqw;height:8.6cqw;border-radius:6cqw;background:#0e0d0c;z-index:5}
+.sbar{display:flex;justify-content:space-between;align-items:center;padding:3.6cqw 8cqw 0;height:14cqw;font-size:4.8cqw;font-weight:600}
+.sbar i{display:inline-block;width:9cqw;height:4cqw;border-radius:1.2cqw;border:.6cqw solid currentColor;opacity:.8}
+.tv{width:100%;max-width:540px;flex:none}
+.tv .bezel{container-type:inline-size;background:#232220;border-radius:12px;padding:9px;box-shadow:0 34px 60px -34px rgba(27,24,20,.7)}
+.tv .scr{aspect-ratio:16/9;border-radius:4px;overflow:hidden;position:relative;font-family:"Instrument Sans",system-ui,sans-serif;font-size:2.6cqw;line-height:1.3}
+.tv .stand{width:24%;height:9px;background:#3a3835;margin:0 auto;border-radius:0 0 6px 6px}
+.combo{position:relative;width:100%;max-width:560px;padding-bottom:112px}
+.combo .tv{width:80%}
+.combo .phone{position:absolute;right:0;bottom:0;width:140px}
+.pair{display:flex;gap:22px;align-items:flex-end;justify-content:center}
+.pair>div:nth-child(2){transform:translateY(-34px)}
+.lbl{font:500 11px "JetBrains Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:12px}
+
+@media (max-width:900px){
+ body{font-size:17px}
+ .wrap{padding:0 20px}
+ .top nav{gap:14px}
+ .hero{grid-template-columns:minmax(0,1fr);gap:40px;padding:24px 0 72px}
+ .hero-visual{min-height:0}
+ .howto{padding:64px 0 72px}
+ .steps{grid-template-columns:minmax(0,1fr);gap:56px}
+ .step .shot{height:auto}
+ .scope{grid-template-columns:minmax(0,1fr)}
+ .scope>div+div{padding-left:0;border-left:0;border-top:1px solid var(--line2);margin-top:22px}
+ .band{padding:64px 0 72px}
+ .card{grid-template-columns:minmax(0,1fr);padding:28px 22px;gap:30px}
+ .tests{grid-template-columns:minmax(0,1fr)}
+ .cta{flex-direction:column;align-items:flex-start}
+ .cta .links{text-align:left}
+ .combo{padding-bottom:84px}
+ .combo .phone{width:100px;right:0}
+ .byline .sep{display:none}
+ .byline{gap:4px 16px}
+ .pair{gap:14px}
+ .pair .phone{width:156px}
+ .pair>div:nth-child(2){transform:translateY(-22px)}
+}
+@media (max-width:380px){
+ .top nav a:nth-child(2){display:none}
+ .pair .phone{width:140px}
+}
+
+
+.jw{background:radial-gradient(130% 100% at 50% 0%,#252a36 0%,#14161c 60%,#0d0e12 100%);color:#f3eee6}
+.jw-tv{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;gap:6cqw;padding:5cqw 7cqw}
+.jw-qr{width:24cqw;background:#fff;border-radius:1.6cqw;padding:1.2cqw;flex:none}
+.jw-qr svg{display:block;width:100%;height:auto}
+.jw-join .kick{font:600 1.9cqw "JetBrains Mono",monospace;letter-spacing:.24em;color:#EBA41E}
+.jw-join h5{font:400 6.4cqw/1 "Instrument Serif",serif;margin:1.2cqw 0 2cqw}
+.jw-join .code{font:500 2.6cqw "JetBrains Mono",monospace;letter-spacing:.2em;color:#bdb5a8}
+.jw-join .who{display:flex;gap:1.2cqw;margin-top:3cqw;align-items:center;font-size:2.2cqw;color:#bdb5a8}
+.jw-join .who i{width:4.4cqw;height:4.4cqw;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-style:normal;font-weight:700;font-size:1.9cqw;color:#1B1814}
+.jw-join .svc{margin-top:2.4cqw;font-size:2.1cqw;color:#8e867a}
+.jw-top{position:absolute;inset:0;padding:4cqw 6cqw;display:flex;flex-direction:column;align-items:center}
+.jw-top .kick{font:600 1.9cqw "JetBrains Mono",monospace;letter-spacing:.24em;color:#EBA41E}
+.jw-top h5{font:400 5.2cqw/1 "Instrument Serif",serif;margin:1cqw 0 3cqw}
+.jw-three{display:flex;gap:2.6cqw;align-items:flex-end}
+.jw-p{position:relative;width:17cqw;aspect-ratio:2/3;border-radius:1.2cqw;background:linear-gradient(160deg,var(--a),var(--b));display:flex;align-items:flex-end;padding:1.4cqw;overflow:hidden}
+.jw-p::after{content:"";position:absolute;width:9cqw;height:9cqw;border-radius:50%;background:rgba(255,240,210,.35);right:-2cqw;top:2cqw}
+.jw-p span{position:relative;font:400 2.4cqw/1.05 "Instrument Serif",serif;color:#fff}
+.jw-p.win{width:21cqw;box-shadow:0 0 0 .5cqw #EBA41E}
+.jw-rank{position:absolute;left:-3.4cqw;bottom:-1cqw;font:400 8cqw/1 "Instrument Serif",serif;color:#fff;z-index:2}
+.jw-slot{position:relative;margin-left:3cqw}
+.jw-play{margin-top:2.6cqw;background:#EBA41E;color:#1B1814;border-radius:5cqw;padding:1.1cqw 3cqw;font-weight:700;font-size:2.1cqw}
+.jw-sub{margin-top:1.2cqw;font-size:1.8cqw;color:#8e867a}
+/* phone */
+.jwp{background:#14161c;color:#f3eee6}
+.jwp .tp{display:flex;justify-content:space-between;margin:1cqw 7cqw 0;font-size:4.4cqw;color:#a59d90}
+.jwp .pc{margin:4cqw 6cqw 0;background:#1f222b;border-radius:6cqw;overflow:hidden}
+.jwp .poster{height:84cqw;background:linear-gradient(160deg,var(--a),var(--b));position:relative;display:flex;align-items:flex-end;padding:5cqw;overflow:hidden}
+.jwp .poster::before{content:"";position:absolute;inset:auto -10cqw 30% -10cqw;height:20cqw;background:rgba(0,0,0,.18);transform:rotate(-7deg)}
+.jwp .poster::after{content:"";position:absolute;width:22cqw;height:22cqw;border-radius:50%;background:rgba(255,236,200,.5);right:10cqw;top:10cqw}
+.jwp .poster span{position:relative;font:400 10cqw/1 "Instrument Serif",serif;color:#fff}
+.jwp .t{padding:4cqw 5cqw 0;font-weight:700;font-size:6cqw}
+.jwp .t em{font-style:normal;font-weight:400;color:#8e867a;margin-left:1.4cqw}
+.jwp .tags{display:flex;flex-wrap:wrap;gap:1.6cqw;padding:3cqw 5cqw 5cqw}
+.jwp .tags span{background:#2c303b;border-radius:10cqw;padding:1.2cqw 2.8cqw;font-size:3.8cqw;color:#dcd6cc}
+.jwp .tags span.hot{background:rgba(235,164,30,.2);color:#f3c46b}
+.jwp .yn{display:flex;justify-content:center;gap:10cqw;margin-top:5cqw}
+.jwp .yn span{width:17cqw;height:17cqw;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:7.4cqw;font-weight:700}
+.jwp .no{border:1px solid #3d414d;color:#cfc7ba}
+.jwp .yes{background:#EBA41E;color:#1B1814}
+.jwp .room{text-align:center;margin-top:4cqw;font-size:3.8cqw;color:#8e867a}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a class="brand" href="/">Shelby Lovejoy</a>
+    <nav><a href="/resume/">Resume</a><a href="https://www.linkedin.com/in/shelbylovejoy">LinkedIn</a><a href="mailto:shelbylovejoy99@gmail.com">Email</a></nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <div class="eyebrow">A concept for JustWatch · Unofficial</div>
+      <h1>Let the whole couch pick.</h1>
+      <p class="lede">JustWatch already knows every service in the house, and with JustWatch TV it's on the TV itself. That puts it in the right spot for the part nobody wants to do: getting everyone on the couch to agree.</p>
+      <div class="byline"><span>By Shelby Lovejoy</span><span class="sep">·</span><span>Georgia Tech CS</span><span class="sep">·</span><span>Built <a href="/">Verdict</a> at Paramount</span></div>
+      <div class="pills"><span class="pill">Every service in one deck</span><span class="pill">Phones join from a QR code</span><span class="pill">Tap to play</span></div>
+    </div>
+    <div class="hero-visual"><div class="combo"><div class="tv"><div class="bezel"><div class="scr jw">
+<div class="jw-top">
+  <div class="kick">TONIGHT'S PICK</div>
+  <h5>The room wants</h5>
+  <div class="jw-three">
+    <div class="jw-slot"><span class="jw-rank">2</span><div class="jw-p" style="--a:#3b4d6b;--b:#b9785a"><span>Arrival</span></div></div>
+    <div class="jw-slot"><span class="jw-rank">1</span><div class="jw-p win" style="--a:#6b2f2a;--b:#d9a35b"><span>Knives Out</span></div></div>
+    <div class="jw-slot"><span class="jw-rank">3</span><div class="jw-p" style="--a:#2f5a4a;--b:#e3b46b"><span>Paddington 2</span></div></div>
+  </div>
+  <div class="jw-play">Play Knives Out</div>
+  <div class="jw-sub">Opens in the app you already pay for</div>
+</div></div></div><div class="stand"></div></div><div class="phone"><div class="scr jwp">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Pick together</span><span>4 of 10</span></div>
+<div class="pc">
+  <div class="poster" style="--a:#6b2f2a;--b:#d9a35b"><span>Knives Out</span></div>
+  <div class="t">Knives Out<em>2019 · 130 min</em></div>
+  <div class="tags"><span class="hot">On a service you have</span><span>Mystery</span><span>Funny</span></div>
+</div>
+<div class="yn"><span class="no">✕</span><span class="yes">✓</span></div>
+<div class="room">Room K7Q2 · 3 people swiping</div>
+</div></div></div></div>
+  </section>
+</div>
+
+<section class="howto">
+  <div class="wrap">
+    <div class="sec-head"><h2>How it would work</h2><span class="mocknote">Concept mockups, not the real app</span></div>
+    <div class="steps"><div class="step"><div class="shot"><div class="tv"><div class="bezel"><div class="scr jw">
+<div class="jw-tv">
+  <div class="jw-qr"><svg viewBox="-1 -1 23 23" xmlns="http://www.w3.org/2000/svg" shape-rendering="crispEdges"><rect x="-1" y="-1" width="23" height="23" fill="#fff"/><rect x="8" y="0" width="1" height="1" fill="#1B1814"/><rect x="9" y="0" width="1" height="1" fill="#1B1814"/><rect x="11" y="0" width="1" height="1" fill="#1B1814"/><rect x="8" y="1" width="1" height="1" fill="#1B1814"/><rect x="9" y="1" width="1" height="1" fill="#1B1814"/><rect x="11" y="1" width="1" height="1" fill="#1B1814"/><rect x="12" y="1" width="1" height="1" fill="#1B1814"/><rect x="8" y="2" width="1" height="1" fill="#1B1814"/><rect x="9" y="2" width="1" height="1" fill="#1B1814"/><rect x="10" y="2" width="1" height="1" fill="#1B1814"/><rect x="12" y="2" width="1" height="1" fill="#1B1814"/><rect x="8" y="3" width="1" height="1" fill="#1B1814"/><rect x="12" y="3" width="1" height="1" fill="#1B1814"/><rect x="9" y="4" width="1" height="1" fill="#1B1814"/><rect x="11" y="4" width="1" height="1" fill="#1B1814"/><rect x="12" y="4" width="1" height="1" fill="#1B1814"/><rect x="8" y="5" width="1" height="1" fill="#1B1814"/><rect x="9" y="5" width="1" height="1" fill="#1B1814"/><rect x="11" y="5" width="1" height="1" fill="#1B1814"/><rect x="9" y="6" width="1" height="1" fill="#1B1814"/><rect x="11" y="6" width="1" height="1" fill="#1B1814"/><rect x="12" y="6" width="1" height="1" fill="#1B1814"/><rect x="8" y="7" width="1" height="1" fill="#1B1814"/><rect x="10" y="7" width="1" height="1" fill="#1B1814"/><rect x="11" y="7" width="1" height="1" fill="#1B1814"/><rect x="0" y="8" width="1" height="1" fill="#1B1814"/><rect x="1" y="8" width="1" height="1" fill="#1B1814"/><rect x="4" y="8" width="1" height="1" fill="#1B1814"/><rect x="9" y="8" width="1" height="1" fill="#1B1814"/><rect x="11" y="8" width="1" height="1" fill="#1B1814"/><rect x="12" y="8" width="1" height="1" fill="#1B1814"/><rect x="14" y="8" width="1" height="1" fill="#1B1814"/><rect x="16" y="8" width="1" height="1" fill="#1B1814"/><rect x="0" y="9" width="1" height="1" fill="#1B1814"/><rect x="4" y="9" width="1" height="1" fill="#1B1814"/><rect x="7" y="9" width="1" height="1" fill="#1B1814"/><rect x="9" y="9" width="1" height="1" fill="#1B1814"/><rect x="14" y="9" width="1" height="1" fill="#1B1814"/><rect x="15" y="9" width="1" height="1" fill="#1B1814"/><rect x="17" y="9" width="1" height="1" fill="#1B1814"/><rect x="18" y="9" width="1" height="1" fill="#1B1814"/><rect x="19" y="9" width="1" height="1" fill="#1B1814"/><rect x="20" y="9" width="1" height="1" fill="#1B1814"/><rect x="0" y="10" width="1" height="1" fill="#1B1814"/><rect x="2" y="10" width="1" height="1" fill="#1B1814"/><rect x="3" y="10" width="1" height="1" fill="#1B1814"/><rect x="4" y="10" width="1" height="1" fill="#1B1814"/><rect x="6" y="10" width="1" height="1" fill="#1B1814"/><rect x="7" y="10" width="1" height="1" fill="#1B1814"/><rect x="12" y="10" width="1" height="1" fill="#1B1814"/><rect x="13" y="10" width="1" height="1" fill="#1B1814"/><rect x="14" y="10" width="1" height="1" fill="#1B1814"/><rect x="17" y="10" width="1" height="1" fill="#1B1814"/><rect x="18" y="10" width="1" height="1" fill="#1B1814"/><rect x="19" y="10" width="1" height="1" fill="#1B1814"/><rect x="20" y="10" width="1" height="1" fill="#1B1814"/><rect x="2" y="11" width="1" height="1" fill="#1B1814"/><rect x="3" y="11" width="1" height="1" fill="#1B1814"/><rect x="4" y="11" width="1" height="1" fill="#1B1814"/><rect x="5" y="11" width="1" height="1" fill="#1B1814"/><rect x="12" y="11" width="1" height="1" fill="#1B1814"/><rect x="17" y="11" width="1" height="1" fill="#1B1814"/><rect x="18" y="11" width="1" height="1" fill="#1B1814"/><rect x="19" y="11" width="1" height="1" fill="#1B1814"/><rect x="0" y="12" width="1" height="1" fill="#1B1814"/><rect x="1" y="12" width="1" height="1" fill="#1B1814"/><rect x="2" y="12" width="1" height="1" fill="#1B1814"/><rect x="3" y="12" width="1" height="1" fill="#1B1814"/><rect x="4" y="12" width="1" height="1" fill="#1B1814"/><rect x="5" y="12" width="1" height="1" fill="#1B1814"/><rect x="6" y="12" width="1" height="1" fill="#1B1814"/><rect x="7" y="12" width="1" height="1" fill="#1B1814"/><rect x="8" y="12" width="1" height="1" fill="#1B1814"/><rect x="9" y="12" width="1" height="1" fill="#1B1814"/><rect x="10" y="12" width="1" height="1" fill="#1B1814"/><rect x="13" y="12" width="1" height="1" fill="#1B1814"/><rect x="14" y="12" width="1" height="1" fill="#1B1814"/><rect x="15" y="12" width="1" height="1" fill="#1B1814"/><rect x="16" y="12" width="1" height="1" fill="#1B1814"/><rect x="17" y="12" width="1" height="1" fill="#1B1814"/><rect x="20" y="12" width="1" height="1" fill="#1B1814"/><rect x="9" y="13" width="1" height="1" fill="#1B1814"/><rect x="10" y="13" width="1" height="1" fill="#1B1814"/><rect x="11" y="13" width="1" height="1" fill="#1B1814"/><rect x="12" y="13" width="1" height="1" fill="#1B1814"/><rect x="14" y="13" width="1" height="1" fill="#1B1814"/><rect x="15" y="13" width="1" height="1" fill="#1B1814"/><rect x="18" y="13" width="1" height="1" fill="#1B1814"/><rect x="20" y="13" width="1" height="1" fill="#1B1814"/><rect x="12" y="14" width="1" height="1" fill="#1B1814"/><rect x="13" y="14" width="1" height="1" fill="#1B1814"/><rect x="14" y="14" width="1" height="1" fill="#1B1814"/><rect x="18" y="14" width="1" height="1" fill="#1B1814"/><rect x="19" y="14" width="1" height="1" fill="#1B1814"/><rect x="13" y="15" width="1" height="1" fill="#1B1814"/><rect x="15" y="15" width="1" height="1" fill="#1B1814"/><rect x="16" y="15" width="1" height="1" fill="#1B1814"/><rect x="17" y="15" width="1" height="1" fill="#1B1814"/><rect x="18" y="15" width="1" height="1" fill="#1B1814"/><rect x="19" y="15" width="1" height="1" fill="#1B1814"/><rect x="9" y="16" width="1" height="1" fill="#1B1814"/><rect x="13" y="16" width="1" height="1" fill="#1B1814"/><rect x="14" y="16" width="1" height="1" fill="#1B1814"/><rect x="15" y="16" width="1" height="1" fill="#1B1814"/><rect x="16" y="16" width="1" height="1" fill="#1B1814"/><rect x="17" y="16" width="1" height="1" fill="#1B1814"/><rect x="8" y="17" width="1" height="1" fill="#1B1814"/><rect x="11" y="17" width="1" height="1" fill="#1B1814"/><rect x="16" y="17" width="1" height="1" fill="#1B1814"/><rect x="17" y="17" width="1" height="1" fill="#1B1814"/><rect x="19" y="17" width="1" height="1" fill="#1B1814"/><rect x="9" y="18" width="1" height="1" fill="#1B1814"/><rect x="10" y="18" width="1" height="1" fill="#1B1814"/><rect x="13" y="18" width="1" height="1" fill="#1B1814"/><rect x="14" y="18" width="1" height="1" fill="#1B1814"/><rect x="15" y="18" width="1" height="1" fill="#1B1814"/><rect x="18" y="18" width="1" height="1" fill="#1B1814"/><rect x="9" y="19" width="1" height="1" fill="#1B1814"/><rect x="11" y="19" width="1" height="1" fill="#1B1814"/><rect x="12" y="19" width="1" height="1" fill="#1B1814"/><rect x="17" y="19" width="1" height="1" fill="#1B1814"/><rect x="20" y="19" width="1" height="1" fill="#1B1814"/><rect x="8" y="20" width="1" height="1" fill="#1B1814"/><rect x="9" y="20" width="1" height="1" fill="#1B1814"/><rect x="10" y="20" width="1" height="1" fill="#1B1814"/><rect x="12" y="20" width="1" height="1" fill="#1B1814"/><rect x="13" y="20" width="1" height="1" fill="#1B1814"/><rect x="14" y="20" width="1" height="1" fill="#1B1814"/><rect x="16" y="20" width="1" height="1" fill="#1B1814"/><rect x="17" y="20" width="1" height="1" fill="#1B1814"/><rect x="20" y="20" width="1" height="1" fill="#1B1814"/><rect x="0" y="0" width="7" height="7" fill="#1B1814"/><rect x="1" y="1" width="5" height="5" fill="#fff"/><rect x="2" y="2" width="3" height="3" fill="#1B1814"/><rect x="14" y="0" width="7" height="7" fill="#1B1814"/><rect x="15" y="1" width="5" height="5" fill="#fff"/><rect x="16" y="2" width="3" height="3" fill="#1B1814"/><rect x="0" y="14" width="7" height="7" fill="#1B1814"/><rect x="1" y="15" width="5" height="5" fill="#fff"/><rect x="2" y="16" width="3" height="3" fill="#1B1814"/></svg></div>
+  <div class="jw-join">
+    <div class="kick">PICK TOGETHER</div>
+    <h5>Scan to join</h5>
+    <div class="code">ROOM  K7Q2</div>
+    <div class="who"><i style="background:#EBA41E">S</i><i style="background:#9fd3c7">P</i><i style="background:#f2a3b3">L</i><span>3 phones in</span></div>
+    <div class="svc">Dealing from 4 services you have, plus free titles</div>
+  </div>
+</div></div></div><div class="stand"></div></div></div><div class="cap"><span class="n">1</span><span><b>Start on the TV.</b> In the JustWatch TV app, pick Pick together. A QR code comes up, and everyone joins from their phone's browser, with no app or account.</span></div></div><div class="step"><div class="shot"><div class="phone"><div class="scr jwp">
+<div class="sbar"><span>9:41</span><i></i></div>
+<div class="tp"><span>Pick together</span><span>4 of 10</span></div>
+<div class="pc">
+  <div class="poster" style="--a:#6b2f2a;--b:#d9a35b"><span>Knives Out</span></div>
+  <div class="t">Knives Out<em>2019 · 130 min</em></div>
+  <div class="tags"><span class="hot">On a service you have</span><span>Mystery</span><span>Funny</span></div>
+</div>
+<div class="yn"><span class="no">✕</span><span class="yes">✓</span></div>
+<div class="room">Room K7Q2 · 3 people swiping</div>
+</div></div></div><div class="cap"><span class="n">2</span><span><b>Everyone swipes.</b> Each phone gets the same ten titles, pulled from every service the household pays for plus free JustWatch TV titles. Yes or no.</span></div></div><div class="step"><div class="shot"><div class="tv"><div class="bezel"><div class="scr jw">
+<div class="jw-top">
+  <div class="kick">TONIGHT'S PICK</div>
+  <h5>The room wants</h5>
+  <div class="jw-three">
+    <div class="jw-slot"><span class="jw-rank">2</span><div class="jw-p" style="--a:#3b4d6b;--b:#b9785a"><span>Arrival</span></div></div>
+    <div class="jw-slot"><span class="jw-rank">1</span><div class="jw-p win" style="--a:#6b2f2a;--b:#d9a35b"><span>Knives Out</span></div></div>
+    <div class="jw-slot"><span class="jw-rank">3</span><div class="jw-p" style="--a:#2f5a4a;--b:#e3b46b"><span>Paddington 2</span></div></div>
+  </div>
+  <div class="jw-play">Play Knives Out</div>
+  <div class="jw-sub">Opens in the app you already pay for</div>
+</div></div></div><div class="stand"></div></div></div><div class="cap"><span class="n">3</span><span><b>The TV shows the top three.</b> Tap the winner and it opens in the right app, or plays right there on JustWatch TV.</span></div></div></div>
+    <div class="scope">
+      <div><h4>In version one</h4><div class="chips"><span class="chip ">Services the household already has</span><span class="chip ">Free JustWatch TV titles in the deck</span><span class="chip ">Join by QR code, no account</span></div></div>
+      <div><h4>Later</h4><div class="chips"><span class="chip dash">Rentals as a tiebreaker</span><span class="chip dash">Mood picks before the swipe</span></div></div>
+      <div><h4>Not doing</h4><div class="chips"><span class="chip no">Accounts for guests</span><span class="chip no">A separate app</span><span class="chip no">Ranking the whole catalog</span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><div><h2>Why I'd build it</h2><p class="sub">The problem, what's already there, how I'd test it, and why me.</p></div></div>
+    <div class="card"><div><div class="num">01</div><h3>Where to watch is solved. What to watch isn't.</h3><p>JustWatch tracks more than 500,000 movies and shows across 1,500+ services. The harder question is what to watch, and it gets harder with more people on the couch. Viewers browse about 12 minutes before picking something, and 46% say finding something is getting harder.</p><p>One person holds the remote and scrolls while everyone else says they don't care, then vetoes. A streaming service can only fix that with its own catalog. JustWatch can fix it with all of them.</p><span class="tag">Problem framing</span></div><div><div class="stat"><div class="big">12 min</div><div class="cap">Average time viewers spend browsing before they pick something (Gracenote, a Nielsen company, 2025). 46% say it's getting harder.</div></div></div></div><div class="card single"><div><div class="num">02</div><h3>Why now</h3><ul class="ev"><li><p>JustWatch TV opens to users this month, with free, rental and ad-free titles inside the JustWatch apps. The pick and the play can finally happen in the same place.</p><span class="src"><a href="https://cordcuttersnews.com/the-app-that-tells-you-where-to-stream-is-launching-its-own-streaming-service-with-free-movies-rentals-and-more/">Cord Cutters News, Sep 2026</a> · <a href="https://ppc.land/streaming-guide-justwatch-to-run-its-own-service-in-12-markets/">PPC Land, Sep 2026</a></span></li><li><p>The TV apps are already there. JustWatch has been on Apple TV, Fire TV and Android TV since 2019, after users asked for it almost daily.</p><span class="src"><a href="https://cordcuttersnews.com/justwatch-launches-apps-for-apple-tv-fire-tv-and-android-tv/">Cord Cutters News, Dec 2019</a></span></li><li><p>No streamer can build this one. Each streamer's picker only knows its own catalog. JustWatch sees more than 1,500 services, so its deck can cover everything the household pays for.</p><span class="src"><a href="https://ppc.land/streaming-guide-justwatch-to-run-its-own-service-in-12-markets/">PPC Land, Sep 2026</a></span></li><li><p>The audience is already there. More than 50 million people use JustWatch every month.</p><span class="src"><a href="https://cordcuttersnews.com/the-app-that-tells-you-where-to-stream-is-launching-its-own-streaming-service-with-free-movies-rentals-and-more/">Cord Cutters News, Sep 2026</a></span></li></ul><span class="tag">Research</span></div></div><div class="card single"><div><div class="num">03</div><h3>Launch it with JustWatch TV</h3><p>I'd start in the US TV apps with households that have two or more services connected, and compare them with similar households that don't get it.</p><div class="tests"><div class="box"><h4>Measure</h4><ul><li>Seconds from opening the app to playing something</li><li>Group sessions that end in playback</li></ul></div><div class="box"><h4>Watch</h4><ul><li>JustWatch TV plays that start from a group pick</li><li>Guests who come back to JustWatch on their own</li></ul></div><div class="box"><h4>Guardrails</h4><ul><li>Click-outs to partner services don't drop</li><li>Solo browsing doesn't get slower</li></ul></div></div><span class="tag">Experiment design</span></div></div><div class="card"><div><div class="num">04</div><h3>I've built a version of this already</h3><p>At Paramount I built Verdict, a game that helps a room pick a movie. The TV hosts, everyone joins from their phone's browser with no app, swipes the same ten movies, and the TV shows the top three. It could only pick from one streaming catalog. JustWatch could pick from all of them.</p><p>I'm a CS student at Georgia Tech, and I'd like to spend next summer building at JustWatch.</p><a class="more" href="/">See how Verdict works →</a></div><div><div class="quote">One person holds the remote. Everyone else holds a phone.</div></div></div>
+    <div class="cta">
+      <h2>Got 15 minutes to talk about it?</h2>
+      <div class="links"><a href="mailto:shelbylovejoy99@gmail.com">shelbylovejoy99@gmail.com</a><a href="https://www.linkedin.com/in/shelbylovejoy">linkedin.com/in/shelbylovejoy</a><a href="/resume/">Resume (PDF)</a></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>An unofficial concept by Shelby Lovejoy. Not affiliated with or endorsed by JustWatch. Movie titles belong to their owners, and the poster art and QR code here are made up. Everything here comes from public information and my own guesses. I haven't seen any internal data.</p>
+    <h5>Sources</h5>
+    <ol><li><a href="https://cordcuttersnews.com/the-app-that-tells-you-where-to-stream-is-launching-its-own-streaming-service-with-free-movies-rentals-and-more/">The app that tells you where to stream is launching its own streaming service (Cord Cutters News, September 15, 2026)</a></li><li><a href="https://ppc.land/streaming-guide-justwatch-to-run-its-own-service-in-12-markets/">Streaming guide JustWatch to run its own service in 12 markets (PPC Land, September 2026)</a></li><li><a href="https://cordcuttersnews.com/justwatch-launches-apps-for-apple-tv-fire-tv-and-android-tv/">JustWatch launches apps for Apple TV, Fire TV and Android TV (Cord Cutters News, December 18, 2019)</a></li><li><a href="https://informitv.com/2025/11/05/it-is-becoming-harder-to-decide-what-to-watch/">It is becoming harder to decide what to watch, on Gracenote's State of Play report (informitv, November 5, 2025)</a></li></ol>
+  </div>
+</footer>
+</body>
+</html>
