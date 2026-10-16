@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Duo Go concept · Shelby Lovejoy</title>
+<style>
+  :root { --ink: #3c3c3c; --muted: #6f6f6f; --bg: #faf9f5; --line: #e7e4dc; --green: #58cc02; --green-text: #3e8e00; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: var(--bg); color: var(--ink); }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 40px 16px 32px; }
+  main { width: 100%; max-width: 1120px; display: flex; flex-direction: column; gap: 22px; }
+  .eyebrow { font-size: 14px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green-text); }
+  h1 { font-size: clamp(30px, 5vw, 48px); line-height: 1.1; font-weight: 800; letter-spacing: -0.01em; }
+  .lede { font-size: clamp(17px, 2.2vw, 20px); line-height: 1.45; color: var(--muted); max-width: 760px; }
+  .frame { width: 100%; aspect-ratio: 16 / 9; border-radius: 18px; overflow: hidden; background: #fff; box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 18px 48px rgba(0,0,0,0.12); }
+  video { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; justify-content: space-between; font-size: 15px; color: var(--muted); }
+  button { font: inherit; font-weight: 700; color: var(--green-text); background: none; border: 2px solid var(--line); border-radius: 999px; padding: 8px 16px; cursor: pointer; }
+  button:hover { border-color: var(--green); }
+  footer { width: 100%; max-width: 1120px; margin-top: 28px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 14px; line-height: 1.5; color: var(--muted); }
+  a { color: inherit; }
+</style>
+</head>
+<body>
+<main>
+  <p class="eyebrow">Concept · 11 seconds</p>
+  <h1>Duo Go: do your lesson out loud</h1>
+  <p class="lede">“Hey Siri, start my Duolingo lesson.” The same lesson, started by voice and answered out loud, so it fits a walk, a commute, cooking or chores.</p>
+  <div class="frame">
+    <video id="v" poster="duo-go-poster.jpg" autoplay muted loop playsinline preload="auto" aria-label="Animation: four people with their hands full put on headphones, say Hey Siri, start my Duolingo lesson, then answer in Spanish, French, Japanese and German">
+      <source src="duo-go.mp4" type="video/mp4">
+      <source src="duo-go.webm" type="video/webm">
+    </video>
+  </div>
+  <div class="row">
+    <span>No sound. Plays on a loop.</span>
+    <button type="button" id="replay">Replay from the start</button>
+  </div>
+</main>
+<footer>
+  Concept by Shelby Lovejoy for the Duolingo APM take-home. Not affiliated with or endorsed by Duolingo; the Duolingo app icon belongs to Duolingo. ·
+  <a href="https://shelbylovejoy.com/">shelbylovejoy.com</a>
+</footer>
+<script>
+  var v = document.getElementById('v');
+  document.getElementById('replay').addEventListener('click', function () { v.currentTime = 0; v.play(); });
+</script>
+</body>
+</html>
