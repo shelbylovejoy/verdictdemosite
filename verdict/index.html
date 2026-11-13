@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Verdict, a game that helps a room pick a movie — Shelby Lovejoy</title>
+<meta name="description" content="Shelby Lovejoy, PM case study: Verdict, an Apple TV prototype that helps a room pick a movie.">
+<link rel="canonical" href="https://shelbylovejoy.com/verdict/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Shelby Lovejoy">
+<meta property="og:title" content="I built Verdict, a game that helps a room pick a movie.">
+<meta property="og:description" content="A side project I took on myself, as both the PM and the engineer. The TV hosts, everyone votes from their own phone, and nobody installs anything.">
+<meta property="og:url" content="https://shelbylovejoy.com/verdict/">
+<meta property="og:image" content="https://shelbylovejoy.com/images/og-verdict.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="TV podium: Pick Tonight's Winner, ranked by the room's votes. Babylon is first with 6 votes.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="I built Verdict, a game that helps a room pick a movie.">
+<meta name="twitter:description" content="A side project I took on myself, as both the PM and the engineer. The TV hosts, everyone votes from their own phone, and nobody installs anything.">
+<meta name="twitter:image" content="https://shelbylovejoy.com/images/og-verdict.jpg">
+<meta name="theme-color" content="#1C2742">
+<link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/images/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/gloock.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/albert-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="cover on-navy">
+  <div class="wrap">
+    <div class="site-header">
+      <a class="brand" href="/" aria-label="Shelby Lovejoy, home"><span class="monogram" aria-hidden="true">SL</span>Shelby Lovejoy</a>
+      <nav class="site-nav" aria-label="Site">
+        <a href="/">Passport</a>
+        <a href="#how">How it works</a>
+        <a href="#pm">My PM work</a>
+        <a href="#about">About</a>
+        <a href="/ShelbyLovejoyResumePM.pdf">Resume</a>
+      </nav>
+    </div>
+    <div class="cs-hero">
+      <p class="eyebrow">Paramount+ internship · Summer 2026</p>
+      <h1>I built Verdict, a game that helps a room pick a movie.</h1>
+      <p class="lede">A side project I took on myself, as both the PM and the engineer. The TV hosts, everyone votes from their own phone, and nobody installs anything.</p>
+      <p class="tags"><span>Working prototype</span><span>Demoed to Paramount leadership</span></p>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="wrap visa-page" aria-label="Verdict at a glance">
+    <div class="visa">
+      <svg class="guilloche" aria-hidden="true" viewBox="0 0 1200 420" preserveAspectRatio="none" fill="none" stroke="#D3DFCB" stroke-width="1.2">
+        <path d="M0 80C200 30 400 130 600 80S1000 30 1200 80"/><path d="M0 150c200-50 400 50 600 0s400-50 600 0"/><path d="M0 220c200-50 400 50 600 0s400-50 600 0"/><path d="M0 290c200-50 400 50 600 0s400-50 600 0"/><path d="M0 360c200-50 400 50 600 0s400-50 600 0"/>
+        <g stroke="#DCE6D5"><path d="M0 115c200 50 400-50 600 0s400 50 600 0"/><path d="M0 255c200 50 400-50 600 0s400 50 600 0"/><path d="M0 395c200 50 400-50 600 0s400 50 600 0"/></g>
+      </svg>
+      <div class="visa-inner">
+        <div class="card-head label">
+          <span>Visa · Visado</span>
+          <span>Category / Categoría &nbsp;Product</span>
+          <span>Issued at / Expedido en &nbsp;Paramount+ · New York</span>
+        </div>
+        <figure class="hero-video">
+          <div class="video-frame">
+            <iframe src="https://player.vimeo.com/video/1232231174?background=1&amp;autoplay=1&amp;loop=1&amp;muted=1" title="Muted loop of the Verdict demo: the TV hosts, phones swipe, and the podium reveals the room's pick." allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>
+          </div>
+          <figcaption class="video-note"><span>Muted loop of the demo.</span><a href="#demo">Watch the demo <span aria-hidden="true">↓</span></a></figcaption>
+        </figure>
+        <ul class="visa-stats" aria-label="Highlights">
+          <li><span class="n">6 weeks,</span><span class="l">idea to demo</span></li>
+          <li><span class="n">6 sessions</span><span class="l">with a VP of Product</span></li>
+          <li><span class="l">Playtested by</span><span class="n">8 interns</span></li>
+          <li><span class="l">Demoed to</span><span class="n">an SVP</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="how" class="wrap cs-section" aria-labelledby="how-h">
+    <div class="section-head">
+      <h2 id="how-h">How it works</h2>
+      <span class="label">4 steps · Pasos</span>
+    </div>
+    <ol class="steps">
+      <li class="step">
+        <div class="step-media"><img class="tv" src="/images/verdict/tv-lobby.png" width="950" height="535" alt="TV lobby: Scan to Join with a QR code, room code S5G3C2, and eight player slots with Player 1 joined." loading="lazy"></div>
+        <div class="step-copy"><span class="num-stamp" aria-hidden="true">1</span><p><strong>Start.</strong> The host taps "Start a game" on the TV, and a QR code appears.</p></div>
+      </li>
+      <li class="step">
+        <div class="step-media phone-only"><img class="phone" src="/images/verdict/phone-mood.png" width="270" height="591" alt="Phone browser: What's the mood? Pick up to three, with options such as Cozy &amp; Comforting, Edge-of-Your-Seat, Mind-Bending and Big &amp; Epic, each with an example title." loading="lazy"></div>
+        <div class="step-copy"><span class="num-stamp" aria-hidden="true">2</span><p><strong>Join.</strong> Everyone scans it, picks a nickname, and chooses up to three moods.</p></div>
+      </li>
+      <li class="step">
+        <div class="step-media"><img class="tv" src="/images/verdict/tv-swiping.png" width="914" height="515" alt="TV: The Verdict Is Coming. Everyone's swiping, top votes make the podium, with a progress bar under each player." loading="lazy"><img class="phone" src="/images/verdict/phone-swipe.png" width="260" height="568" alt="Phone: a movie card being swiped right with a green Like label, and the next card underneath." loading="lazy"></div>
+        <div class="step-copy"><span class="num-stamp" aria-hidden="true">3</span><p><strong>Swipe.</strong> Everyone swipes the same 10 movies on their phone.</p></div>
+      </li>
+      <li class="step">
+        <div class="step-media"><img class="tv" src="/images/verdict/tv-podium.png" width="975" height="549" alt="TV podium: Pick Tonight's Winner, ranked by the room's votes. Babylon is first with 6 votes." loading="lazy"><img class="phone" src="/images/verdict/phone-locked.png" width="278" height="607" alt="Phone: Ranking locked. Eyes on the TV. The podium is loading." loading="lazy"></div>
+        <div class="step-copy"><span class="num-stamp" aria-hidden="true">4</span><p><strong>Pick.</strong> The TV shows the top three. Tap the winner to start watching.</p><p class="note">If it's a tie, everyone ranks their top three in a final round.</p></div>
+      </li>
+    </ol>
+    <figure id="demo" class="demo-figure">
+      <div class="video-frame">
+        <iframe src="https://player.vimeo.com/video/1232231174?texttrack=en&amp;title=0&amp;byline=0&amp;portrait=0" title="Verdict full demo, 1:19, with captions" allow="autoplay; fullscreen; picture-in-picture" loading="lazy"></iframe>
+      </div>
+      <figcaption><span>Verdict full demo, 1:19, with captions.</span><a href="https://vimeo.com/1232231174">Open on Vimeo</a></figcaption>
+    </figure>
+  </section>
+
+  <section id="pm" class="wrap cs-section" aria-labelledby="pm-h">
+    <div class="section-head">
+      <h2 id="pm-h">My PM work</h2>
+      <p>Seven things I did as the PM, in order.</p>
+    </div>
+    <div class="pm-list">
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">01</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-navy)">PM skill: <b>Problem framing</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I found the problem</h3><p>My friends and I once scrolled for a movie so long that it ruined the night. This happens a lot. U.S. viewers spend about 12 minutes deciding what to watch (Nielsen, 2025). The catalog wasn't the problem. One person holds the remote, and nobody wants to be the one who picks.</p></div>
+            <div class="pm-aside"><div class="big-number"><span class="n">12 min</span><span class="l">Deciding what to watch</span></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">02</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-teal)">PM skill: <b>User focus</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I designed for the guest</h3><p>The host has the Apple TV and the subscription. Everyone else just has a phone, and it might be an Android. So guests join from their browser, with no app and no account.</p></div>
+            <div class="pm-aside"><div class="pair"><div><h4>Host</h4><p>Has the Apple TV and the subscription.</p></div><div><h4>Guest</h4><p>Joins from their browser, with no app and no account.</p></div></div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">03</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-blue)">PM skill: <b>Iteration</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I shaped it with a VP of Product</h3><p>I met six times with Paramount's VP of Product Management, Streaming Innovation. We talked through the overall design, where the game should live, and how people would actually use it. Those talks moved Verdict from Tinder-style swiping between phones to a Jackbox-style game on the TV.</p></div>
+            <div class="pm-aside">
+              <div class="before-after">
+                <figure><div class="phones"><img src="/images/verdict/phone-swipe.png" width="260" height="568" alt="Before: a phone swiping a movie card." loading="lazy"><img src="/images/verdict/phone-swipe.png" width="260" height="568" alt="Before: a second phone swiping, to match with the first." loading="lazy"></div><figcaption>Before</figcaption></figure>
+                <span class="arrow" aria-hidden="true">→</span>
+                <figure><div class="tv"><img src="/images/verdict/tv-swiping.png" width="914" height="515" alt="After: one TV showing every player's swiping progress while the whole room plays." loading="lazy"></div><figcaption>After</figcaption></figure>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">04</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-red)">PM skill: <b>User research</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I tested it with users</h3><p>I ran a playtest with about eight interns and took notes by hand. Their biggest ask was picking by mood instead of genre, so I rebuilt the picker around moods. I also demoed it to senior leaders from several teams and a family at home.</p>
+              <div class="quotes"><blockquote>"I can totally see this changing the way I browse content."</blockquote><blockquote>"I wish I had this for my last movie night."</blockquote></div></div>
+            <div class="pm-aside"><img class="notebook" src="/images/verdict/notebook.jpg" width="691" height="1070" alt="Handwritten notebook page titled Verdict Comments, listing playtest feedback such as narrow down genres, examples of genres, make it more obvious that you swipe, undo on swipe, flip to see description, by vibe with emojis, and rescramble if all say no." loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">05</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-green)">PM skill: <b>Prioritization</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I cut the scope</h3><p>I had six weeks, so I kept only what gets a room from "what should we watch?" to a pick. I said no to accounts, an iPhone-only app, and AI recommendations. Each one would have turned Verdict back into a regular streaming app.</p></div>
+            <div class="pm-aside"><div class="cols">
+              <div><h4>Built</h4><ul><li>Mood picks</li><li>A 10-card deck</li><li>Live voting</li><li>A tiebreak round</li><li>The podium</li><li>Tap to play</li><li>Flip for description</li></ul></div>
+              <div><h4>Next</h4><ul><li>A veto card</li><li>Undo a swipe</li><li>Reshuffle when everyone passes</li></ul></div>
+              <div class="no"><h4>Said no</h4><ul><li>Accounts</li><li>An iPhone-only app</li><li>AI picks</li></ul></div>
+            </div></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">06</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-purple)">PM skill: <b>Metrics and risk</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I defined success</h3><p>Verdict didn't ship, so these are the numbers I'd launch with.</p><p>I also planned for what could break it. Spotty Wi-Fi falls back to the local network, ties go to a final round, and the game only stores a nickname, which is deleted when the game ends.</p></div>
+            <div class="pm-aside"><dl class="metrics">
+              <div class="metric north"><dt><h4>North star</h4></dt><dd><p>Games where the winner starts playing within 5 minutes</p></dd></div>
+              <div class="metric"><dt><h4>Watch</h4></dt><dd><p>How many guests join, and time to a pick (goal: under 90 seconds)</p></dd></div>
+              <div class="metric"><dt><h4>Guardrail</h4></dt><dd><p>People still use My List and watch as much as before</p></dd></div>
+            </dl></div>
+          </div>
+        </div>
+      </article>
+
+      <article class="pm">
+        <div class="pm-inner">
+          <div class="pm-head"><span class="label"><span class="no">07</span> Endorsement · Endoso</span><span class="skill" style="--ink:var(--stamp-rust)">PM skill: <b>Communication</b></span></div>
+          <div class="pm-body">
+            <div class="pm-text"><h3>I pitched it to leadership</h3><p>In my last week, I demoed Verdict to Paramount's SVP of Innovation and Emerging Platforms and the VP of Product Management, Streaming Innovation. They said it filled a real need and saw a market for it. They said I shouldn't be afraid if this ends up showing up on my screen one day. It was my last week, so the project ended there.</p></div>
+            <div class="pm-aside"><img src="/images/verdict/tv-podium.png" width="975" height="549" alt="The podium reveal shown in the leadership demo: Babylon wins tonight's pick." loading="lazy"></div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="wrap two-up" aria-label="Reflection and build">
+    <div>
+      <h2>What I'd do differently</h2>
+      <p>I built this a bit siloed. Next time, I'd do user research before I start building, so the idea isn't just living in my own head.</p>
+    </div>
+    <div>
+      <h2>How I built it</h2>
+      <p>SwiftUI on the Apple TV, a plain web page for phones, and Firebase to pass votes between them. I used Claude Code to build fast, but the product calls were mine. When it pushed an Apple-only design, I kept it open to Android, because most living rooms aren't all iPhones.</p>
+      <details>
+        <summary>Technical details <span class="plus" aria-hidden="true"><span class="open-l">+ expand</span><span class="close-l">− collapse</span></span></summary>
+        <div class="arch" role="img" aria-label="Architecture: the TV host passes votes through a Firebase relay to and from each guest phone.">
+          <div><h4>TV host</h4><p>SwiftUI on the Apple TV</p></div>
+          <span class="link" aria-hidden="true">⇄</span>
+          <div><h4>Relay</h4><p>Firebase</p></div>
+          <span class="link" aria-hidden="true">⇄</span>
+          <div><h4>Guest phones</h4><p>A plain web page</p></div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="about" class="wrap bearer" aria-labelledby="about-h">
+    <div class="card">
+      <svg class="guilloche" aria-hidden="true" viewBox="0 0 1200 420" preserveAspectRatio="none" fill="none" stroke="#E6DDC8" stroke-width="1.2">
+        <path d="M0 60C150 20 300 100 450 60S750 20 900 60s250 40 300 0"/><path d="M0 110c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 160c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 210c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 260c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 310c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 360c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/><path d="M0 410c150-40 300 40 450 0s300-40 450 0 250 40 300 0"/>
+      </svg>
+      <div class="card-inner">
+        <div class="card-head label"><span>Bearer / Titular</span><span>Passport / Pasaporte</span></div>
+        <div class="bearer-body">
+          <div class="photo tall"><img src="/images/shelby-cafe.jpg" width="720" height="1080" alt="Shelby Lovejoy, smiling, in a black blazer, leaning against a window outside a café." loading="lazy"></div>
+          <div class="bearer-fields">
+            <h2 id="about-h" class="bearer-name">Shelby Lovejoy</h2>
+            <dl class="bearer-dl">
+              <div class="field"><dt>Studying</dt><dd>Computer Science, Georgia Tech · May 2028</dd></div>
+              <div class="field"><dt>Threads</dt><dd>Information Internetworks, Human-Computer Interaction</dd></div>
+              <div class="field"><dt>Now</dt><dd>Product Fellow, Product@GT x UPS (LATAM)</dd></div>
+              <div class="field"><dt>Previously</dt><dd>Paramount+ Apple team</dd></div>
+              <div class="field wide"><dt>Toolkit</dt><dd>Figma, Jira, SQL, Swift, Python, React</dd></div>
+            </dl>
+          </div>
+        </div>
+        <div class="other-work">
+          <h3 class="label">Other work</h3>
+          <div class="entry"><span class="t">Feature Flag Health Report</span><span class="d">A tool that found 90 dead or stale flags out of 385. Two other teams asked to use it.</span></div>
+          <div class="entry"><span class="t">Crash-triage automation</span><span class="d">A six-step workflow that replaced a manual pass every sprint, with a human approval step at the end.</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact" class="site-footer on-navy">
+  <div class="wrap">
+    <div class="footer-inner">
+      <div class="footer-copy">
+        <p class="eyebrow">Next stamp · Próximo sello</p>
+        <h2>Want the 20-minute version? Let's talk.</h2>
+      </div>
+      <div class="footer-links">
+        <a class="btn gold" href="mailto:shelbylovejoy99@gmail.com">shelbylovejoy99@gmail.com</a>
+        <a href="https://www.linkedin.com/in/shelbylovejoy/">linkedin.com/in/shelbylovejoy</a>
+        <a href="/ShelbyLovejoyResumePM.pdf">Resume (PDF)</a>
+      </div>
+    </div>
+    <div class="footer-fine">
+      <span>Verdict is a personal prototype and was not shipped.</span>
+      <a href="/">← Back to the passport</a>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
