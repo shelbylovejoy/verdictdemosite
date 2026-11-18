@@ -64,6 +64,7 @@
           <figcaption class="video-note"><span>Muted loop of the demo.</span><a href="#demo">Watch the full demo</a></figcaption>
         </figure>
         <dl class="visa-facts">
+          <div class="field"><dt>Role</dt><dd>PM and engineer</dd></div>
           <div class="field"><dt>Duration</dt><dd>6 weeks, idea to demo</dd></div>
           <div class="field"><dt>Platform</dt><dd>Apple TV and phone browsers</dd></div>
           <div class="field"><dt>Status</dt><dd>Working prototype</dd></div>
@@ -178,12 +179,13 @@
       <details>
         <summary>Technical details <span class="plus" aria-hidden="true"><span class="open-l">Show</span><span class="close-l">Hide</span></span></summary>
         <div class="arch" role="img" aria-label="Architecture: the TV host passes votes through a Firebase relay to and from each guest phone.">
-          <div><h4>TV host</h4><p>SwiftUI on the Apple TV</p></div>
+          <div><p class="arch-h">TV host</p><p>SwiftUI on the Apple TV</p></div>
           <span class="link" aria-hidden="true">⇄</span>
-          <div><h4>Relay</h4><p>Firebase</p></div>
+          <div><p class="arch-h">Relay</p><p>Firebase</p></div>
           <span class="link" aria-hidden="true">⇄</span>
-          <div><h4>Guest phones</h4><p>A plain web page</p></div>
+          <div><p class="arch-h">Guest phones</p><p>A plain web page</p></div>
         </div>
+        <p class="arch-note">The TV owns all game state and match logic. Phones join through a thin Firebase relay that does no computing of its own. If Firebase isn’t available, the host falls back to local-network HTTP, and there’s a simulated mode for development. Neither changes the data model. Unit and emulator tests cover the match logic.</p>
       </details>
     </div>
   </section>
