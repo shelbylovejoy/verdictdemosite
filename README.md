@@ -14,3 +14,11 @@ To preview locally, serve the repo root (paths are absolute), for example:
 ```bash
 python3 -m http.server 8080
 ```
+
+## Checking for AI tells
+
+`.claude/agents/ai-tells-reviewer.md` is a Claude Code agent that reviews pages for design and copy that read as machine-generated. In Claude Code, ask it to "use the ai-tells-reviewer agent on index.html". It starts from a quick grep pass you can also run yourself:
+
+```bash
+bash scripts/ai-tells-lint.sh index.html verdict/index.html assets/site.css
+```
